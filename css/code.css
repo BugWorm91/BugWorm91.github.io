@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+.gist .pl-c {
+	color: #008000 !important;
+}
+
+.gist .pl-k {
+	color: #0000ff !important;
+}
+
+.gist .pl-en {
+	color: #24292e !important;
+}
+
+.gist .pl-s {
+	color: #a31515 !important;
+}
+
+.gist-data {
+	max-height: 400px;
+}
+
+pre.source_code {
+	overflow: auto;
+	word-wrap: normal;
+}
+
+pre.source_code {
+	font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+	background-color: #333333;
+	border: 1px solid #999999;
+	margin: 10px 0;
+	padding: 10px;
+	line-height: 130%;
+	overflow: auto;
+	word-wrap: normal;
+	color: #ffffff;
+}
+
+
