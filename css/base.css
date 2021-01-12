@@ -8,6 +8,7 @@ body{
 	margin: 0 auto 200px auto;
 	padding-top: 18px;
 	width: 80%;
+	display: none;
 }
 
 /* 表示領域が980px以上の場合 */
