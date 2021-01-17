@@ -29,7 +29,7 @@ body{
 	#global_navigation a{ display: table-cell; vertical-align: top; }
 	
 	section h2{ font-size: 150%; }
-	section h3{ font-size: 120%; }
+	section h3{ font-size: 100%; }
 	section p{ margin-bottom: 15px; }
 	
 	#mobile_navigation, .mobile{ display: none; }
