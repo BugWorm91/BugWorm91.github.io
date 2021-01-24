@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>コンピューターバグと本の虫 | Computer bug | C#</title>
+	<meta name="author" content="BugWorm91">
+	<meta name="keywords" content="コンピューター | IT | SE | プログラミング | 読書 | 小説">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<link rel="shortcut icon" href="../../../img/parts/favicon.ico">
+	<link type="text/css" rel="stylesheet" href="../../../css/initialize.css">
+	<link type="text/css" rel="stylesheet" href="../../../css/base.css">
+	<link type="text/css" rel="stylesheet" href="../../../css/code.css">
+	<script src="../../../js/jquery-3.5.1.min.js"></script>
+	<script src="../../../js/index.js"></script>
+</head>
+<body>
+<div id="wrapper">
+
+	<!-- Header -->
+	<header id="site_header"></header>
+
+	<!-- Contents -->
+	<div id="contents">
+		<!-- main -->
+		<div id="main_contents">
+			<div id="main_img"><img src="../../../img/parts/siginbord_bug_s.jpg" alt="Computer bug"></div>
+			<section>
+				<h2>メモ帳から始めるC#</h2>
+				<header class="info">2021/01/17</header>
+				<p>　C#でアプリケーションを作成する場合、基本的には Microsoft の Visual Studio というIDE[Integrated Development Environment](統合開発環境)をインストールして使用することになりますが、実は Visual Studio をインストールしなくてもアプリケーションを作ることができます。</p>
+				<div class="page_top"><a href="#wrapper">このページのトップへ</a></div>
+				<section>
+					<h3>ソースコードとコンパイラー</h3>
+					<p>　まず適当なフォルダを作ります。例としてここでは Dドライブ に test というフォルダ(D:\test)を作りました。</p>
+					<p>　メモ帳などのテキストエディターに下記の内容をそのままコピーして HelloWorld.cs という名前で今作成したフォルダに保存してください。</p>
+					<script src="https://gist.github.com/BugWorm91/7a3d840dcea5a6cd07825f200761798f.js"></script>
+					<p>　これがC#のソースコードです。残念ながらコンピューターはこのソースコードを直接解読して実行することはできません。ファイルの拡張子をを .cs ではなく .exe にしてもエラーになります。</p>
+					<p>　ソースコードはあくまでも人間用の形式なので、これをコンピューターが実行できる形式に変換する必要があります。</p>
+					<p>　C#に限った話ではありませんが、大抵のプログラミング言語にはソースコードをコンピューターが実行可能な状態に変換するコンパイラーというものが用意されています。</p>
+					<p>　C#のコンパイラーは csc.exe という名前で Windows には標準で含まれているはずです。環境によって異なるかもしれませんが、私の環境では下記のフォルダの中に csc.exe がありました。</p>
+<pre class="source_code out"><code>C:\Windows\Microsoft.NET\Framework64
+    (---省略---)
+    ├ v2.0.50727
+    │  └ csc.exe
+    ├ v3.0
+    ├ v3.5
+    │  └ csc.exe
+    └ v4.0.30319
+        └ csc.exe
+</code></pre>
+					<p>　v2.0 や v3.0 のようにフォルダが分かれていますが、これは .NET Framework のバージョンです。今回は v4.0.30319 にある csc.exe を使います。</p>
+					<p>　他のバージョンのものを使っても基本的には同じになるはずなので v4.0.30319 がない場合は v3.5 や新しいバージョンの csc.exe でも問題ありません。</p>
+				</section>
+				<section>
+					<h3>ソースコードのコンパイルと実行</h3>
+					<p>　コンパイルを行うにはコマンドプロンプトを使用します。cd コマンドで HelloWorld.cs を置いたフォルダに移動します。</p>
+					<pre class="source_code"><code>C:\Users\○○○&gt;cd /d D:\test</code></pre>
+					<p>　そして下記コマンドを実行するとコンパイルが実行され、 HelloWorld.cs と同じフォルダに HelloWorld.exe が作成されます。</p>
+					<pre class="source_code"><code>D:\test&gt;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe HelloWorld.cs</code></pre>
+					<p>　HelloWorld.exe を実行してみましょう。コマンドプロンプトのような黒いウィンドウに『Hello World』と表示されるはずです。何かキーを押すとウィンドウが閉じてアプリケーションが終了します。</p>
+					<pre class="source_code output"><code>Hello World</code></pre>
+					<p>　そもそもテキストとして見るものではありませんが HelloWorld.exe をメモ帳やテキストエディタで開いてみると文字化けのようになっていると思います。これがコンパイラーによってコンピューターが実行可能な状態に変換された状態になります。</p>
+					<p>　厳密にはIL[Intermediate Language]と呼ばれる中間言語に変換された状態で、この中間言語が .NET Framework に含まれるCLR[Common Language Runtime](共通言語ランタイム)と呼ばれるソフトウェアにコンパイルされながら動いているそうです。</p>
+					<div class="page_top"><a href="#wrapper">このページのトップへ</a></div>
+
+				</section>
+			</section>	
+		</div>
+
+		<!-- side -->
+		<div id="side_contents"><div class="side_navigation"><h2>loading...</h2><ul><li><a href="#">loading...</a></li></ul></div></div>
+	</div><!-- /Contents -->
+
+	<!-- Footer -->
+	<footer id="site_footer"></footer>
+	
+</div><!-- id="wrapper" -->
+</body>
+</html>
