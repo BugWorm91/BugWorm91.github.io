@@ -219,3 +219,15 @@ section > section{
 .list li{
 	margin: 8px 3px 8px 1em;
 }
+
+.attention{
+	color: red;
+	font-size: 65%;
+}
+
+.info{
+	font-size: 14px;
+	text-align: right;
+	margin-bottom: 3px;
+}
+
