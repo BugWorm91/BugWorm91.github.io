@@ -32,6 +32,8 @@ body{
 	section h3{ font-size: 100%; }
 	section p{ margin-bottom: 15px; }
 	
+	pre.source_code{width: 705px;}
+	
 	#mobile_navigation, .mobile{ display: none; }
 }
 
