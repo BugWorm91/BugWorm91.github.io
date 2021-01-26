@@ -31,14 +31,14 @@
 				<div class="page_top"><a href="#wrapper">このページのトップへ</a></div>
 				<section>
 					<h3>ソースコードとコンパイラー</h3>
-					<p>　まず適当なフォルダを作ります。例としてここでは Dドライブ に test というフォルダ(D:\test)を作りました。</p>
+					<p>　まず適当なフォルダを作ります。例としてここではデスクトップに cs というフォルダ(C:\Users\admin\Desktop\cs)を作りました。</p>
 					<p>　メモ帳などのテキストエディターに下記の内容をそのままコピーして HelloWorld.cs という名前で今作成したフォルダに保存してください。</p>
 					<script src="https://gist.github.com/BugWorm91/7a3d840dcea5a6cd07825f200761798f.js"></script>
 					<p>　これがC#のソースコードです。残念ながらコンピューターはこのソースコードを直接解読して実行することはできません。ファイルの拡張子をを .cs ではなく .exe にしてもエラーになります。</p>
 					<p>　ソースコードはあくまでも人間用の形式なので、これをコンピューターが実行できる形式に変換する必要があります。</p>
 					<p>　C#に限った話ではありませんが、大抵のプログラミング言語にはソースコードをコンピューターが実行可能な状態に変換するコンパイラーというものが用意されています。</p>
-					<p>　C#のコンパイラーは csc.exe という名前で Windows には標準で含まれているはずです。環境によって異なるかもしれませんが、私の環境では下記のフォルダの中に csc.exe がありました。</p>
-<pre class="source_code out"><code>C:\Windows\Microsoft.NET\Framework64
+					<p>　C#のコンパイラーは csc.exe(Visual C# Command Line Compiler) という名前で Windows には標準で含まれているはずです。環境によって異なるかもしれませんが、私の環境では下記のフォルダの中に csc.exe がありました。</p>
+<pre class="source_code"><code>C:\Windows\Microsoft.NET\Framework64
     (---省略---)
     ├ v2.0.50727
     │  └ csc.exe
@@ -51,18 +51,26 @@
 					<p>　v2.0 や v3.0 のようにフォルダが分かれていますが、これは .NET Framework のバージョンです。今回は v4.0.30319 にある csc.exe を使います。</p>
 					<p>　他のバージョンのものを使っても基本的には同じになるはずなので v4.0.30319 がない場合は v3.5 や新しいバージョンの csc.exe でも問題ありません。</p>
 				</section>
+				
 				<section>
 					<h3>ソースコードのコンパイルと実行</h3>
-					<p>　コンパイルを行うにはコマンドプロンプトを使用します。cd コマンドで HelloWorld.cs を置いたフォルダに移動します。</p>
-					<pre class="source_code"><code>C:\Users\○○○&gt;cd /d D:\test</code></pre>
-					<p>　そして下記コマンドを実行するとコンパイルが実行され、 HelloWorld.cs と同じフォルダに HelloWorld.exe が作成されます。</p>
-					<pre class="source_code"><code>D:\test&gt;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe HelloWorld.cs</code></pre>
-					<p>　HelloWorld.exe を実行してみましょう。コマンドプロンプトのような黒いウィンドウに『Hello World』と表示されるはずです。何かキーを押すとウィンドウが閉じてアプリケーションが終了します。</p>
-					<pre class="source_code output"><code>Hello World</code></pre>
-					<p>　そもそもテキストとして見るものではありませんが HelloWorld.exe をメモ帳やテキストエディタで開いてみると文字化けのようになっていると思います。これがコンパイラーによってコンピューターが実行可能な状態に変換された状態になります。</p>
-					<p>　厳密にはIL[Intermediate Language]と呼ばれる中間言語に変換された状態で、この中間言語が .NET Framework に含まれるCLR[Common Language Runtime](共通言語ランタイム)と呼ばれるソフトウェアにコンパイルされながら動いているそうです。</p>
+					<p>　コンパイルを行うには コマンドプロンプト もしくは PowerShell というアプリを使用します。どちらもキーボードで命令文を打ち込んで Windows を操作できるアプリです。</p>
+					<p>　コマンドプロンプトもしくはPowerShellを起動したか、さらに使っているPC[Personal Computer]によって表示内容が若干変わりますが、起動するとどちらも表示される最後の行が下記のようになると思います。</p>
+					<pre class="source_code"><code>C:\Users\admin&gt;</code></pre>
+					<p>　まず、cd と半角スペース、作成したcsフォルダのパスを入力して</p>
+					<pre class="source_code"><code>C:\Users\admin&gt;cd C:\Users\admin\Desktop\cs</code></pre>
+					<p>　Enterを押します。 ctrl+c ctrl+v のショートカットは使えないので注意してください。</p>
+					<p>　Enterを押すと新しく下記のような行が表示されます。</p>
+					<pre class="source_code"><code>C:\Users\admin\Desktop\cs&gt;</code></pre>
+					<p>　続けて csc.exe のパスと半角スペース、HelloWorld.csと打ち込んで</p>
+					<pre class="source_code"><code>C:\Users\admin\Desktop\cs&gt;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe HelloWorld.cs</code></pre>
+					<p>　Enterを押すと何行か英語のメッセージが表示され、 HelloWorld.cs と同じフォルダに HelloWorld.exe が作成されます。</p>
+					<p>　何をしたか分からないかもしれませんが、マウスで HelloWorld.cs を csc.exe にドラッグ&amp;ドロップするという動作を命令文で実現したというイメージです。</p>
+					
+					<p>　作成された HelloWorld.exe を実行してみましょう。コマンドプロンプトのような黒いウィンドウに『Hello World』と表示され、何かキーを押すとウィンドウが閉じてプログラムが終了します。</p>
+					<p>　そもそもテキストとして見るものではありませんが HelloWorld.exe をメモ帳やテキストエディタで開いてみると文字化けのようになっていると思います。これがコンパイラー(csc.exe)によってソースコードが実行可能な状態(.exe)に変換された結果です。</p>
+					<p>　厳密にはIL[Intermediate Language]と呼ばれる中間言語に変換された状態で、この中間言語が .NET Framework に含まれるCLR[Common Language Runtime](共通言語ランタイム)と呼ばれるソフトウェア内でさらにコンパイルされながら動いているそうです。</p>
 					<div class="page_top"><a href="#wrapper">このページのトップへ</a></div>
-
 				</section>
 			</section>	
 		</div>
