@@ -32,6 +32,14 @@ main section p, main section li, main section dt, main section dd{
 	main section section, main section p, main section .area{
 		padding: 0 24px;
 	}
+	
+	main table{
+		margin: 3px 24px;
+	}
+	
+	#contents h2, #contents h3, #contents h4{
+		margin: 8px;
+	}
 }
 
 /* 表示領域が601以上～979px以下の場合 */
@@ -45,6 +53,18 @@ main section p, main section li, main section dt, main section dd{
 	}
 	#site_header > nav > a{
 		display: block;
+	}
+	
+	main table{
+		margin: 3px 0;
+	}
+	
+	main section section, main section p, main section .area{
+		padding: 0 3px;
+	}
+	
+	#contents h2, #contents h3, #contents h4{
+		margin: 8px 3px;
 	}
 }
 
@@ -63,6 +83,15 @@ main section p, main section li, main section dt, main section dd{
 	
 	main table{
 		font-size: 14px;
+		margin: 3px 0;
+	}
+	
+	main section section, main section p, main section .area{
+		padding: 0 3px;
+	}
+	
+	#contents h2, #contents h3, #contents h4{
+		margin: 8px 3px;
 	}
 }
 
@@ -85,17 +114,11 @@ main > section > section{
 main > section > section > section{
 	margin-top: 32px;
 }
-main table{
-	margin: 3px 24px;
-}
 
 main section ul, main section ol, main section dl{
 	padding: 8px 2em;
 }
 
-#contents h2, #contents h3, #contents h4{
-	margin: 8px;
-}
 #contents h2{
 	font-size: 24px;
 }
@@ -114,7 +137,6 @@ main table th, main table td{
 	padding: 8px;
 }
 main table{
-	max-width: 100%;
 	border-top: solid 1px #333333;
 	border-left: solid 1px #333333;
 }
