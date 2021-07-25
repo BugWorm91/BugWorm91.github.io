@@ -18,6 +18,10 @@ main section p, main section li, main section dt, main section dd{
 		width: 980px;
 	}
 	
+	#site_header h1{
+		font-size: 42px;
+	}
+	
 	#site_header > nav{
 		display: table;
 		table-layout: fixed;
@@ -48,6 +52,10 @@ main section p, main section li, main section dt, main section dd{
 		width: 92%;
 	}
 	
+	#site_header h1{
+		font-size: 34px;
+	}
+
 	#site_header > nav{
 		padding: 0 8px;
 	}
@@ -64,6 +72,10 @@ main section p, main section li, main section dt, main section dd{
 @media screen and (max-width: 600px){
 	#wrapper{
 		width: 92%;
+	}
+	
+	#site_header h1{
+		font-size: 28px;
 	}
 	
 	#site_header > nav{
@@ -86,14 +98,17 @@ main section p, main section li, main section dt, main section dd{
 	}
 }
 
-#site_header{
-	margin-bottom: 40px;
-}
-
 #site_header h1{
-	font-size: 40px;
 	font-weight: bold;
 	margin-bottom: 18px;
+}
+
+#site_header h1 span{
+		font-size: 60%;
+	}
+
+#site_header{
+	margin-bottom: 40px;
 }
 
 main > section{
