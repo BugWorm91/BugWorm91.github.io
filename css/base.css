@@ -39,6 +39,7 @@ main section p, main section li, main section dt, main section dd{
 	
 	main table{
 		margin: 3px 24px;
+		font-size: 14px;
 	}
 	
 	#contents h2, #contents h3, #contents h4{
@@ -65,6 +66,11 @@ main section p, main section li, main section dt, main section dd{
 	
 	#contents h2, #contents h3, #contents h4{
 		margin: 8px 0;
+	}
+	
+		main table{
+		margin: 3px 24px;
+		font-size: 14px;
 	}
 }
 
@@ -140,7 +146,7 @@ main section ul, main section ol, main section dl{
 }
 
 main table th, main table td{
-	padding: 8px;
+	padding: 3px 8px;
 }
 main table{
 	border-top: solid 1px #333333;
