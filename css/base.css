@@ -55,16 +55,8 @@ main section p, main section li, main section dt, main section dd{
 		display: block;
 	}
 	
-	main table{
-		margin: 3px 0;
-	}
-	
-	main section section, main section p, main section .area{
-		padding: 0 3px;
-	}
-	
 	#contents h2, #contents h3, #contents h4{
-		margin: 8px 3px;
+		margin: 8px 0;
 	}
 }
 
@@ -83,15 +75,14 @@ main section p, main section li, main section dt, main section dd{
 	
 	main table{
 		font-size: 14px;
-		margin: 3px 0;
 	}
 	
 	main section section, main section p, main section .area{
-		padding: 0 3px;
+		padding: 3px 0;
 	}
 	
 	#contents h2, #contents h3, #contents h4{
-		margin: 8px 3px;
+		margin: 8px 0;
 	}
 }
 
