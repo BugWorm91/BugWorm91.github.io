@@ -62,6 +62,7 @@ main section p, main section li, main section dt, main section dd{
 	}
 	#site_header > nav > a{
 		display: block;
+		padding: 8px;
 	}
 	
 	#contents h2, #contents h3, #contents h4{
@@ -89,6 +90,7 @@ main section p, main section li, main section dt, main section dd{
 	}
 	#site_header > nav > a{
 		display: block;
+		padding: 8px;
 	}
 	
 	main table{
