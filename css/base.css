@@ -8,20 +8,16 @@ body{
 	margin: 32px auto 200px auto;
 }
 
-main section p, main section li, main section dt, main section dd{
-	line-height: 170%;
-}
-
 /* 表示領域が980px以上の場合 */
 @media screen and (min-width: 980px){
 	#wrapper{
 		width: 980px;
 	}
-	
+
 	#site_header h1{
 		font-size: 42px;
 	}
-	
+
 	#site_header > nav{
 		display: table;
 		table-layout: fixed;
@@ -32,16 +28,11 @@ main section p, main section li, main section dt, main section dd{
 		text-align: center;
 		vertical-align: middle;
 	}
-	
+
 	main section section, main section p, main section .area{
 		padding: 0 24px;
 	}
-	
-	main table{
-		margin: 3px 24px;
-		font-size: 14px;
-	}
-	
+
 	#contents h2, #contents h3, #contents h4{
 		margin: 8px;
 	}
@@ -50,87 +41,42 @@ main section p, main section li, main section dt, main section dd{
 /* 表示領域が601以上～979px以下の場合 */
 @media screen and (min-width: 601px) and (max-width: 979px){
 	#wrapper{
-		width: 92%;
+		width: 98%;
 	}
-	
+
 	#site_header h1{
 		font-size: 34px;
 	}
 
 	#site_header > nav{
-		padding: 0 8px;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
 	}
 	#site_header > nav > a{
-		display: block;
-		padding: 8px;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
 	}
-	
+
 	#contents h2, #contents h3, #contents h4{
 		margin: 8px 0;
-	}
-	
-		main table{
-		margin: 3px 24px;
-		font-size: 14px;
 	}
 }
 
 /* 表示領域が600px以下の場合 */
 @media screen and (max-width: 600px){
 	#wrapper{
-		width: 92%;
+		width: 98%;
 	}
-	
+
 	#site_header h1{
 		font-size: 28px;
 	}
-	
-	#site_header > nav{
-		padding: 0 8px;
-	}
-	#site_header > nav > a{
-		display: block;
-		padding: 8px;
-	}
-	
-	main table{
-		font-size: 14px;
-	}
-	
-	main section section, main section p, main section .area{
-		padding: 3px 0;
-	}
-	
+
 	#contents h2, #contents h3, #contents h4{
 		margin: 8px 0;
 	}
-}
-
-#site_header h1{
-	font-weight: bold;
-	margin-bottom: 18px;
-}
-
-#site_header h1 span{
-		font-size: 60%;
-	}
-
-#site_header{
-	margin-bottom: 40px;
-}
-
-main > section{
-	margin-bottom: 80px;
-}
-main > section > section{
-	margin-top: 40px;
-}
-main > section > section > section{
-	margin-top: 32px;
-}
-
-main section ul, main section ol, main section dl{
-	padding: 8px 2em;
 }
 
 #contents h2{
@@ -143,18 +89,21 @@ main section ul, main section ol, main section dl{
 	font-size: 20px;
 }
 
+#site_header > nav{
+	padding: 32px 8px;
+}
+
+main > section{
+	margin-bottom: 80px;
+}
+main > section section{
+	margin-top: 40px;
+}
+main > section > section > section{
+	margin-top: 32px;
+}
+
 #site_footer{
 	text-align: center;
 }
 
-main table th, main table td{
-	padding: 3px 8px;
-}
-main table{
-	border-top: solid 1px #333333;
-	border-left: solid 1px #333333;
-}
-main table th, main table td{
-	border-right: solid 1px #333333;
-	border-bottom: solid 1px #333333;
-}
