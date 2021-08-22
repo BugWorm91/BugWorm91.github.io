@@ -17,6 +17,11 @@ body{
 	#site_header h1{
 		font-size: 42px;
 	}
+	#site_header p a{
+		font-size: 24px;
+		line-height: 150%;
+		font-weight: bold;
+	}
 
 	#site_header > nav{
 		display: table;
@@ -47,6 +52,10 @@ body{
 	#site_header h1{
 		font-size: 34px;
 	}
+	#site_header p a{
+		line-height: 150%;
+		font-weight: bold;
+	}
 
 	#site_header > nav{
 		display: table;
@@ -72,6 +81,11 @@ body{
 
 	#site_header h1{
 		font-size: 28px;
+		font-weight: bold;
+	}
+	#site_header p a{
+		line-height: 150%;
+		font-weight: bold;
 	}
 
 	#contents h2, #contents h3, #contents h4{
@@ -107,3 +121,6 @@ main > section > section > section{
 	text-align: center;
 }
 
+.rare{
+	color: red;
+}
