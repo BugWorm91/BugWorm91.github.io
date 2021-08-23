@@ -9,5 +9,5 @@
 #site_header p a:hover,
 #site_header p a:active{
 	color: #ff9913;
-	text-shadow:2px 2px 0 #999999, 2px 3px 0 #999999;
+	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
 }

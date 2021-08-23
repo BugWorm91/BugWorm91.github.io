@@ -14,13 +14,13 @@ body{
 		width: 980px;
 	}
 
-	#site_header h1{
+	#site_header p a{
 		font-size: 42px;
 	}
-	#site_header p a{
+	#site_header h1{
 		font-size: 24px;
-		line-height: 150%;
 		font-weight: bold;
+		line-height: 180%;
 	}
 
 	#site_header > nav{
@@ -49,11 +49,11 @@ body{
 		width: 98%;
 	}
 
-	#site_header h1{
+	#site_header p a{
 		font-size: 34px;
 	}
-	#site_header p a{
-		line-height: 150%;
+	#site_header h1{
+		line-height: 180%;
 		font-weight: bold;
 	}
 
@@ -79,12 +79,11 @@ body{
 		width: 98%;
 	}
 
-	#site_header h1{
-		font-size: 28px;
-		font-weight: bold;
-	}
 	#site_header p a{
-		line-height: 150%;
+		font-size: 28px;
+	}
+	#site_header h1{
+		line-height: 180%;
 		font-weight: bold;
 	}
 

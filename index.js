@@ -21,7 +21,7 @@ fetch("another_eden.json").then(function(response) {
 
         for(let charas in json[item]["character"]){
 
-            if(charas == "0"){               
+            if(charas == "0"){
                 if(json[item]["character"].length > 1)
                 {
                     dateCell.rowSpan = json[item]["character"].length;
