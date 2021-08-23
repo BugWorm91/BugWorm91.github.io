@@ -121,6 +121,9 @@ main > section section{
 main > section > section > section{
 	margin-top: 32px;
 }
+main section p, main section blockquote{
+	line-height: 200%;
+}
 
 #site_footer{
 	text-align: center;
@@ -128,4 +131,9 @@ main > section > section > section{
 
 .rare{
 	color: red;
+}
+
+.source{
+	text-align: right;
+	font-size: 80%;
 }
