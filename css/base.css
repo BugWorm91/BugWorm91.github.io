@@ -87,19 +87,25 @@ body{
 		font-weight: bold;
 	}
 
+	#site_header > nav > a{
+		display: block;
+		padding: 16px 8px;
+		font-size: 18px;
+	}
+
 	#contents h2, #contents h3, #contents h4{
 		margin: 8px 0;
 	}
 }
 
 #contents h2{
-	font-size: 24px;
-}
-#contents h3{
 	font-size: 22px;
 }
-#contents h4{
+#contents h3{
 	font-size: 20px;
+}
+#contents h4{
+	font-size: 18px;
 }
 
 #site_header > nav{
