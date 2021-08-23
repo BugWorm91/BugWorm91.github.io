@@ -129,6 +129,10 @@ main section p, main section blockquote{
 	text-align: center;
 }
 
+#contents{
+	min-height: 200px;
+}
+
 .rare{
 	color: red;
 }
