@@ -11,3 +11,9 @@
 	color: #ff9913;
 	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
 }
+
+#contents h2{
+	padding: 8px;
+	border-top: dotted 2px #ff9913;
+	border-bottom: dotted 2px #ff9913;
+}
