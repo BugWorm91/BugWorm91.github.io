@@ -16,4 +16,6 @@
 	padding: 8px;
 	border-top: dotted 2px #ff9913;
 	border-bottom: dotted 2px #ff9913;
+	color: #ff9913;
+	text-shadow:1px 1px 0 #cacaca, 1px 1px 0 #999999;
 }
