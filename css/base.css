@@ -88,9 +88,10 @@ body{
 	}
 
 	#site_header > nav > a{
-		display: block;
-		padding: 16px 8px;
-		font-size: 18px;
+		display: table-cell;
+		text-align: center;
+		padding: 8px 16px;
+		font-size: 12px;
 	}
 
 	#contents h2, #contents h3, #contents h4{
