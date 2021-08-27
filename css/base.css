@@ -8,6 +8,10 @@ body{
 	margin: 32px auto 200px auto;
 }
 
+#site_header nav a{
+	display: block;
+}
+
 /* 表示領域が980px以上の場合 */
 @media screen and (min-width: 980px){
 	#wrapper{
@@ -23,12 +27,12 @@ body{
 		line-height: 180%;
 	}
 
-	#site_header > nav{
+	#site_header > nav > ul{
 		display: table;
 		table-layout: fixed;
 		width: 100%;
 	}
-	#site_header > nav > a{
+	#site_header > nav > ul >li{
 		display: table-cell;
 		text-align: center;
 		vertical-align: middle;
@@ -57,12 +61,12 @@ body{
 		font-weight: bold;
 	}
 
-	#site_header > nav{
+	#site_header > nav > ul{
 		display: table;
 		table-layout: fixed;
 		width: 100%;
 	}
-	#site_header > nav > a{
+	#site_header > nav > ul >li{
 		display: table-cell;
 		text-align: center;
 		vertical-align: middle;
@@ -87,11 +91,22 @@ body{
 		font-weight: bold;
 	}
 
-	#site_header > nav > a{
+	#site_header > nav > ul{
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+
+	#site_header > nav > ul >li{
 		display: table-cell;
 		text-align: center;
+		vertical-align: middle;
 		padding: 8px 16px;
 		font-size: 12px;
+	}
+	#site_header > nav > ul > li > a{
+		min-height: 2em;
+		vertical-align: middle;
 	}
 
 	#contents h2, #contents h3, #contents h4{
