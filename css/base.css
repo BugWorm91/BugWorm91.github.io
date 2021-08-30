@@ -124,6 +124,10 @@ body{
 	main section table{
 		font-size: 12px;
 	}
+
+	main p, blockquote{
+		font-size: 14px;
+	}
 }
 
 #contents h2{
@@ -131,6 +135,7 @@ body{
 }
 #contents h3{
 	font-size: 20px;
+	margin-bottom: 16px;
 }
 #contents h4{
 	font-size: 18px;
@@ -165,7 +170,6 @@ main section table th, main section table td{
 main section table th{
 	background-color: #ffc579;
 }
-
 
 #site_footer{
 	text-align: center;
