@@ -89,4 +89,8 @@ main{
     #wrapper{
         width: 95%;
     }
+
+    #site_header > nav > ul >li{
+        font-size: 12px;
+    }
 }
