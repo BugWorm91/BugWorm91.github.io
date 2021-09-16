@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+body{
+	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+#wrapper{
+	margin: 32px auto 200px auto;
+}
+
+main article h2{
+    margin-bottom: 36px;
+}
+
+#site_header h1
+#site_header h1 a:link,
+#site_header h1 a:visited,
+#site_header h1 a:hover,
+#site_header h1 a:active,
+#site_header p a:link,
+#site_header p a:visited,
+#site_header p a:hover,
+#site_header p a:active,
+main article h2{
+	color: #ff9913;
+}
+
+#site_header h1{
+	font-weight: bold;
+	text-shadow:2px 2px 0 #999999, 2px 3px 0 #999999;
+}
+
+#site_header h1 a:link,
+#site_header h1 a:visited,
+#site_header h1 a:hover,
+#site_header h1 a:active,
+#site_header p a:link,
+#site_header p a:visited,
+#site_header p a:hover,
+#site_header p a:active,
+main > article > h2{
+	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
+}
+
+#site_footer{
+	text-align: center;
+}
+
+#site_header > nav > ul{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 24px 0;
+}
+#site_header > nav > ul >li{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+#site_header nav a{
+	display: block;
+}
+
+main article h2{
+	padding: 12px;
+	border-top: dotted 2px #ff9913;
+	border-bottom: dotted 2px #ff9913;
+	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
+}
+
+main{
+    margin-bottom: 200px;
+}
+
+
+@media screen and (min-width: 980px){
+    #wrapper{
+        width: 980px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 979px){
+    #wrapper{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #wrapper{
+        width: 95%;
+    }
+}
