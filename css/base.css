@@ -75,16 +75,21 @@ main{
 main article section{
     line-height: 180%;
 }
-main article section p{
+main article section p,
+main article ul{
     padding: 0px 1em;
     font-size: 16px;
 }    
 main article section h3{
     padding: 12px;
     font-weight: bold;
+    color:#444444;
 }
 main article table{
     font-size: 12px;
+}
+main article li{
+    margin-bottom: 24px;
 }
 
 main article table{
