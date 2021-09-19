@@ -88,8 +88,20 @@ main article section h3{
 main article table{
     font-size: 12px;
 }
-main article li{
-    margin-bottom: 24px;
+
+time{
+    text-align: right;
+    font-size: 12px;
+    display: block;
+    line-height: 100%;
+}
+
+.list{
+    margin: 24px;
+}
+
+.list li{
+    margin-bottom: 12px;
 }
 
 main article table{
