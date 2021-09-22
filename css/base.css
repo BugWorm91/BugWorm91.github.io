@@ -137,4 +137,15 @@ main article table th{
         font-size: 12px;
     }
 }
+
+#book{
+    padding: 0 18px;
+}
+#book > section{
+    margin-top: 18px;
+}
+#book footer{
+    text-align: right;
+    font-size: 14px;
+}
     
