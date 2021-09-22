@@ -1,3 +1,17 @@
+let array = [];
+
+fetch("link.json").then(function(response) {
+    return response.json();
+}).then(function(json) {
+
+    for(let item in json)
+    {
+        array.push(json[item]["id"]);
+    }
+
+});
+
+
 fetch("read.json").then(function(response) {
     return response.json();
 }).then(function(json) {
@@ -9,6 +23,9 @@ fetch("read.json").then(function(response) {
             continue;
         }
 
+        let link = document.createElement("a");
+        link.href = "./book/book.html?" + json[item]["isbn"];
+
         let newRow = bookTable.insertRow();
 
         let dateCell = newRow.insertCell();
@@ -17,7 +34,16 @@ fetch("read.json").then(function(response) {
 
         let titleCell = newRow.insertCell();
         let titleText = document.createTextNode(json[item]["title"]);
-        titleCell.appendChild(titleText);
+
+        if(array.indexOf(json[item]["isbn"]) !== -1)
+        {
+            link.textContent = json[item]["title"];
+            titleCell.appendChild(link);
+        }
+        else
+        {
+            titleCell.appendChild(titleText);
+        }
 
         let authorCell = newRow.insertCell();
         let authorText = document.createTextNode(json[item]["author"]);
