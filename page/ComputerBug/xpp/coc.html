@@ -32,6 +32,12 @@
             <h3>Extention と Chain of Command(CoC)</h3>
             <p>Dynamics 365 の基本的なカスタマイズ方法。従来のイベントハンドラーの制限を克服するためにChain of Command(CoC)が新しく作られた？</p>
             <p>Dynamics 365 標準のプログラムはバージョンアップで変更される可能性があるため直接変更しない。</p>
+            <ol class="list">
+                <li>①処理を差し込むメソッドを特定</li>
+                <li>②_Extensionのクラスを追加</li>
+                <li>③classに[ExtensionOf(Extensionするオブジェクトの種類)]とfinalをつける</li>
+                <li>④カスタマイズするメソッドを定義し、処理内で next で自身を呼び出す</li>
+            </ol>
             <script src="https://gist.github.com/BugWorm91/ccea89761e19464675537529a68869e0.js"></script>
         </section>
         <div class="page_top"><a href="#">▲</a></div>
