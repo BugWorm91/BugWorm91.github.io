@@ -89,6 +89,14 @@ main article table{
     font-size: 12px;
 }
 
+#book h4{
+	padding: 12px;
+}
+#book p{
+	padding: 0 2em;
+}
+
+
 time{
     text-align: right;
     font-size: 12px;
