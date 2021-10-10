@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../../../img/parts/favicon.ico">
     <link type="text/css" rel="stylesheet" href="../../../css/initialize.css">
     <link type="text/css" rel="stylesheet" href="../../../css/base.css">
-    <title>コンピューターバグと本の虫 | Computer Bug</title>
+    <title>コンピューターバグと本の虫 | Computer Bug | X++</title>
 </head>
 <body>
 <div id="wrapper">
@@ -27,18 +27,20 @@
 <main>
     <article>
         <h2>Computer Bug | X++</h2>
-        <time datetime="2021-9-23" itemprop="modified">2021/09/23</time>
+        <time datetime="2021-10-10" itemprop="modified">2021/10/10</time>
         <section>
             <h3>Extention と Chain of Command(CoC)</h3>
             <p>Dynamics 365 の基本的なカスタマイズ方法。従来のイベントハンドラーの制限を克服するためにChain of Command(CoC)が新しく作られた？</p>
             <p>Dynamics 365 標準のプログラムはバージョンアップで変更される可能性があるため直接変更しない。</p>
+            <p>複数個所で定義した場合実行順序はランダムなので順番に影響しないことを確認するかそもそも分けて定義しない。</p>
+            <p>privateは参照もChain of Command(CoC)もできない。</p>
             <ol class="list">
                 <li>①処理を差し込むメソッドを特定</li>
                 <li>②_Extensionのクラスを追加</li>
                 <li>③classに[ExtensionOf(Extensionするオブジェクトの種類)]とfinalをつける</li>
                 <li>④カスタマイズするメソッドを定義し、処理内で next で自身を呼び出す</li>
             </ol>
-            <script src="https://gist.github.com/BugWorm91/ccea89761e19464675537529a68869e0.js"></script>
+            <script src="https://gist.github.com/BugWorm91/afb0585ebc1fb3270c1fd61c3e44d037.js"></script>
         </section>
         <div class="page_top"><a href="#">▲</a></div>
     </article>
