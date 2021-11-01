@@ -92,10 +92,6 @@ main article table{
 #book h4{
 	padding: 12px;
 }
-#book p{
-	padding: 0 2em;
-}
-
 
 time{
     text-align: right;
@@ -149,9 +145,6 @@ main article table th{
     }
 }
 
-#book{
-    padding: 0 18px;
-}
 #book > section{
     margin-top: 18px;
 }
