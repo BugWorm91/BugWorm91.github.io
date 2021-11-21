@@ -1,5 +1,41 @@
 [
     {
+        "date": "2021/11/20",
+        "character": [
+            {"name": "エムス", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2021/11/20",
+        "character": [
+            {"name": "ナトレー", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2021/11/16",
+        "character": [
+            {"name": "ヌーム", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2021/11/11",
+        "character": [
+            {"name": "レイヴン", "class": "★★★★"}
+        ]
+    },
+    {
+        "date": "2021/11/08",
+        "character": [
+            {"name": "シエル", "class": "★★★☆☆"}
+        ]
+    },
+    {
+        "date": "2021/11/04",
+        "character": [
+            {"name": "エリナ", "class": "★★★☆"}
+        ]
+    },
+    {
         "date": "2021/10/31",
         "character": [
              {"name": "ニクサ", "class": "★★★"}
