@@ -156,6 +156,10 @@ main article table th{
         width: 95%;
     }
 
+	main article p{
+		padding: 0 16px;
+	}	
+
     #site_header > nav > ul >li{
         font-size: 12px;
     }
