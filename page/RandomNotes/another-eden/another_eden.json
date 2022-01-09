@@ -1,5 +1,29 @@
 [
     {
+        "date": "2022/01/09",
+        "character": [
+            {"name": "テーム", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/01/07",
+        "character": [
+            {"name": "ネイリア", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/01/05",
+        "character": [
+            {"name": "ニクサ", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/01/04",
+        "character": [
+            {"name": "リンリー", "class": "★★★☆"}
+        ]
+    },
+    {
         "date": "2022/01/03",
         "character": [
             {"name": "トーム", "class": "★★★"}
