@@ -12,10 +12,6 @@ body{
 	min-height: 100vh;
 }
 
-.p_0{
-	padding: 0 12px;
-}
-
 #site_header{
 	padding-top: 8px;
 }
@@ -36,6 +32,17 @@ main article h2{
 main article p, main article section p{
     padding: 0 64px;
 	line-height: 250%;
+}
+
+main>article div.category_paragraph{
+	padding:0 12px;
+	margin-bottom: 8px;
+	line-height: 150%;
+}
+main>article div.category_paragraph>p{
+	font-size: 16px;
+	padding:0;
+	line-height: 150%;
 }
 
 #site_header h1 a:link,
@@ -209,4 +216,15 @@ main article table th{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 }
-   
+
+.rare{
+	color: red;
+}
+
+.num{
+	text-align: right;
+}
+
+.bottom_space{
+	margin-bottom: 32px;
+}
