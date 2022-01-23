@@ -1,3 +1,11 @@
+let characters = [];
+let characters3 = [];
+let characters3_4 = [];
+let characters3_5 = [];
+let characters4 = [];
+let characters4_5 = [];
+let characters5 = [];
+
 fetch("another_eden.json").then(function(response) {
     return response.json();
 }).then(function(json) {
@@ -11,12 +19,18 @@ fetch("another_eden.json").then(function(response) {
     //         ・
 
     const targetTable = document.getElementById("another_eden");
+    let dateCell;
+    let dateText;
+    let nameCell;
+    let nameText;
+    let classCell;
+    let classText;
 
     for (let item in json) {
         let newRow = targetTable.insertRow();
 
-        let dateCell = newRow.insertCell();
-        let dateText = document.createTextNode(json[item]["date"]);
+        dateCell = newRow.insertCell();
+        dateText = document.createTextNode(json[item]["date"]);
         dateCell.appendChild(dateText);
 
         for(let charas in json[item]["character"]){
@@ -30,12 +44,12 @@ fetch("another_eden.json").then(function(response) {
                 newRow = targetTable.insertRow();
             }
 
-            let nameCell = newRow.insertCell();
-            let nameText = document.createTextNode(json[item]["character"][charas]["name"]);
+            nameCell = newRow.insertCell();
+            nameText = document.createTextNode(json[item]["character"][charas]["name"]);
             nameCell.appendChild(nameText);
             
-            let classCell = newRow.insertCell();
-            let classText = document.createTextNode(json[item]["character"][charas]["class"]);
+            classCell = newRow.insertCell();
+            classText = document.createTextNode(json[item]["character"][charas]["class"]);
             classCell.appendChild(classText);
 
             if(classText.length >= 5){
@@ -43,6 +57,74 @@ fetch("another_eden.json").then(function(response) {
                 classCell.classList.add("rare");
                 dateCell.classList.add("rare");
             }
+
+            characters.push(nameText);
+
+            switch(classText.nodeValue)
+            {
+                case "★★★":
+                    characters3.push(nameText);
+                    break;
+                case "★★★☆":
+                        characters3_4.push(nameText);
+                        break;
+                case "★★★☆☆":
+                    characters3_5.push(nameText);
+                    break;
+                case "★★★★":
+                    characters4.push(nameText);
+                    break;
+                case "★★★★☆":
+                    characters4_5.push(nameText);
+                    break;
+                case "★★★★★":
+                    characters5.push(nameText);
+                    break;
+                default:
+                    throw "エラー";
+            }
         }
     }
+
+    const total = document.getElementById("total");
+    const level3_count = document.getElementById("level3_count");
+    const level3_4_count = document.getElementById("level3_4_count");
+    const level3_5_count = document.getElementById("level3_5_count");
+    const level4_count = document.getElementById("level4_count");
+    const level4_5_count = document.getElementById("level4_5_count");
+    const level5_count = document.getElementById("level5_count");
+
+    const level3_ratio = document.getElementById("level3_ratio");
+    const level3_4_ratio = document.getElementById("level3_4_ratio");
+    const level3_5_ratio = document.getElementById("level3_5_ratio");
+    const level4_ratio = document.getElementById("level4_ratio");
+    const level4_5_ratio = document.getElementById("level4_5_ratio");
+    const level5_ratio = document.getElementById("level5_ratio");
+
+    if(characters.length != (characters3.length + characters3_4.length 
+        + characters3_5.length + characters4.length + characters4_5.length + characters5.length))
+    {
+        throw "エラー"
+    }
+
+    total.innerHTML = (characters.length).toLocaleString();
+    level3_count.innerHTML = (characters3.length).toLocaleString();
+    level3_4_count.innerHTML = (characters3_4.length).toLocaleString();
+    level3_5_count.innerHTML = (characters3_5.length).toLocaleString();
+    level4_count.innerHTML = (characters4.length).toLocaleString();
+    level4_5_count.innerHTML = (characters4_5.length).toLocaleString();
+    level5_count.innerHTML = (characters5.length).toLocaleString();
+
+    function calcRatio(targetValue) {
+        let ratio = targetValue / characters.length * 100;
+        let n = Math.pow(10, 2);
+        return Math.round(ratio * n) / n;
+    }
+
+    level3_ratio.innerHTML = calcRatio(characters3.length);
+    level3_4_ratio.innerHTML = calcRatio(characters3_4.length);
+    level3_5_ratio.innerHTML = calcRatio(characters3_5.length);
+    level4_ratio.innerHTML = calcRatio(characters4.length);
+    level4_5_ratio.innerHTML = calcRatio(characters4_5.length);
+    level5_ratio.innerHTML = calcRatio(characters5.length);
 });

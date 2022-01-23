@@ -1,5 +1,47 @@
 [
     {
+        "date": "2022/01/22",
+        "character": [
+            {"name": "ミランダ", "class": "★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/01/18",
+        "character": [
+            {"name": "ブリーノ", "class": "★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/01/17",
+        "character": [
+            {"name": "パシア", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/01/17",
+        "character": [
+            {"name": "チヨ", "class": "★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/01/17",
+        "character": [
+            {"name": "イオ", "class": "★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/01/14",
+        "character": [
+            {"name": "ヤヅキ", "class": "★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/01/11",
+        "character": [
+            {"name": "ポム", "class": "★★★★"}
+        ]
+    },
+    {
         "date": "2022/01/09",
         "character": [
             {"name": "テーム", "class": "★★★"}
