@@ -1,5 +1,113 @@
 [
     {
+        "date": "2022/02/19",
+        "character": [
+            {"name": "セース", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/02/116",
+        "character": [
+            {"name": "サウリャ", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/02/12",
+        "character": [
+            {"name": "チヨ", "class": "★★★★"}
+        ]
+    },
+    {
+        "date": "2022/02/12",
+        "character": [
+            {"name": "マイティ", "class": "★★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/02/12",
+        "character": [
+            {"name": "ベネディト", "class": "★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/02/11",
+        "character": [
+            {"name": "イスカ", "class": "★★★★★"}
+        ]
+    },
+    {
+        "date": "2022/02/11",
+        "character": [
+            {"name": "クトス", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/02/05",
+        "character": [
+            {"name": "ミュルス", "class": "★★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/02/04",
+        "character": [
+            {"name": "ノマル", "class": "★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/02/02",
+        "character": [
+            {"name": "エリナ", "class": "★★★★"}
+        ]
+    },
+    {
+        "date": "2022/02/01",
+        "character": [
+            {"name": "ルーフス", "class": "★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/02/01",
+        "character": [
+            {"name": "メイ", "class": "★★★☆☆"}
+        ]
+    },
+    {
+        "date": "2022/01/30",
+        "character": [
+            {"name": "ルイナ", "class": "★★★☆"}
+        ]
+    },
+    {
+        "date": "2022/01/30",
+        "character": [
+            {"name": "ケルキア", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/01/30",
+        "character": [
+            {"name": "サウリャ", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/01/30",
+        "character": [
+            {"name": "オール", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/01/30",
+        "character": [
+            {"name": "ウラニャ", "class": "★★★"}
+        ]
+    },
+    {
+        "date": "2022/01/29",
+        "character": [
+            {"name": "キュカ", "class": "★★★☆"}
+        ]
+    },
+    {
         "date": "2022/01/28",
         "character": [
             {"name": "フォラン", "class": "★★★☆"}
