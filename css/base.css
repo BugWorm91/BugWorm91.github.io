@@ -5,6 +5,46 @@ body{
 	overflow-y: scroll;
 }
 
+@media screen and (min-width: 980px){
+    #wrapper{
+        width: 980px;
+    }
+
+	main article p, main article time, main article ul, main article h4, .page_top,
+	section dl dt, section dl dd,.source, #book footer{
+		padding: 0 56px;
+	}
+
+	main article table{
+		margin: 0 56px;
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 979px){
+    #wrapper{
+        width: 90%;
+    }
+
+	main article p, main article time, main article ul, main article h4, .page_top,
+	main section dl dt, main section dl dd,.source, #book footer{
+		padding: 0 32px;
+	}
+
+	main article table{
+		margin: 0 32px;
+	}
+}
+
+@media screen and (max-width: 600px){
+    #wrapper{
+        width: 95%;
+    }
+
+    #site_header > nav > ul >li{
+        font-size: 12px;
+    }
+}
+
 #wrapper{
 	margin: 0 auto;
 	display: flex;
@@ -15,36 +55,6 @@ body{
 #site_header{
 	padding-top: 8px;
 }
-
-main{
-	flex: 1;
-}
-
-#site_footer{
-	text-align: center;
-	font-size: 14px;
-}
-
-main article h2{
-    margin-bottom: 12px;
-}
-
-main article p, main article section p{
-    padding: 0 64px;
-	line-height: 250%;
-}
-
-main>article div.category_paragraph{
-	padding:0 12px;
-	margin-bottom: 8px;
-	line-height: 150%;
-}
-main>article div.category_paragraph>p{
-	font-size: 16px;
-	padding:0;
-	line-height: 150%;
-}
-
 #site_header h1 a:link,
 #site_header h1 a:visited,
 #site_header h1 a:hover,
@@ -53,7 +63,8 @@ main>article div.category_paragraph>p{
 #site_header p a:visited,
 #site_header p a:hover,
 #site_header p a:active,
-main article h2{
+main article h2,
+main article h3{
 	color: #ff9913;
 }
 
@@ -74,7 +85,6 @@ main > article > h2{
 	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
 }
 
-
 #site_header > nav > ul{
     display: table;
     table-layout: fixed;
@@ -90,6 +100,27 @@ main > article > h2{
 	display: block;
 }
 
+main{
+	flex: 1;
+}
+
+main article{
+	padding-bottom: 64px;
+}
+
+main article p{
+	line-height: 250%;
+}
+main article ul li{
+	margin-bottom: 18px;
+}
+
+main article time{
+	font-size: 80%;
+	text-align: right;
+	display: block;
+}
+
 main article h2, #site_footer{
 	padding: 12px;
 	border-top: dotted 2px #ff9913;
@@ -97,40 +128,22 @@ main article h2, #site_footer{
 }
 main article h2{
 	border-bottom: dotted 2px #ff9913;
+	margin-bottom: 16px;
+}
+main article h3{
+	padding: 12px;
+	border-top: dotted 1px #ff9913;
+	border-bottom: dotted 1px #ff9913;
+	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
+	margin-bottom: 16px;
+}
+main article ul li{
+	padding: 0 32px;
 }
 
-main article ul{
-    padding: 0px 1em;
-    font-size: 16px;
-}    
-main article h3{
-    padding: 12px;
-    font-weight: bold;
-    color:#444444;
-}
 main article table{
     font-size: 12px;
 }
-
-#book h4{
-	padding: 12px;
-}
-
-time{
-    text-align: right;
-    font-size: 12px;
-    display: block;
-    line-height: 100%;
-}
-
-.list{
-    margin: 24px;
-}
-
-.list li{
-    margin-bottom: 12px;
-}
-
 main article table{
 	border-top: solid 1px #333333;
 	border-left: solid 1px #333333;
@@ -142,49 +155,33 @@ main article table th, main article table td{
 main article table th{
 	background-color: #ffc579;
 }
-#read{
-	margin: auto;
+main article table thead, main article table tbody {
+	display: block;
+}
+main article table tbody, main article table thead{
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
-@media screen and (min-width: 980px){
-    #wrapper{
-        width: 980px;
-    }
+main section{
+	margin-bottom: 32px;
 }
 
-@media screen and (min-width: 601px) and (max-width: 979px){
-    #wrapper{
-        width: 90%;
-    }
+main section dl{
+	margin-bottom: 56px;
+}
+main section dl dd{
+	margin: 8px 0 16px 1em;
 }
 
-@media screen and (max-width: 600px){
-    #wrapper{
-        width: 95%;
-    }
-
-	main article p, main article section p{
-		padding: 0 8px 0 32px;
-	}	
-
-    #site_header > nav > ul >li{
-        font-size: 12px;
-    }
-}
-
-#book > section{
-    margin-top: 18px;
-}
-#book footer{
-    text-align: right;
-    font-size: 14px;
-	margin-bottom: 64px;
+#site_footer{
+	text-align: center;
+	font-size: 14px;
 }
 
 .page_top{
 	text-align: right;
 	font-size: 50%;
-	margin: 3px 0 18px 0;
 }
 .page_top a{
 	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
@@ -217,14 +214,58 @@ main article table th{
 	-moz-border-radius: 3px;
 }
 
-.rare{
-	color: red;
+.error{
+	border: solid 1px #ff0000;
+	padding: 3px;
 }
 
-.num{
-	text-align: right;
+input {
+	border: 2px solid currentcolor;
+  }
+input:invalid {
+	border: 2px dashed red;
+}
+input:invalid:focus {
+	background-image: linear-gradient(pink, lightgreen);
 }
 
-.bottom_space{
-	margin-bottom: 32px;
+fieldset{
+	margin-bottom: 38px;
 }
+
+.source{
+    text-align: right;
+    font-size: 80%;
+}
+
+#read{
+	margin-bottom: 18px;
+}
+#book > section{
+    margin-top: 18px;
+}
+#book footer{
+    text-align: right;
+    font-size: 14px;
+	margin-bottom: 64px;
+}
+#book h4{
+	padding: 12px;
+}
+
+#read th:nth-child(1), #test_table td:nth-child(1){
+	width: 75px;
+}
+#read th:nth-child(2), #test_table td:nth-child(2){
+	width: 300px;
+}
+#read th:nth-child(3), #test_table td:nth-child(3){
+	width: 250px;
+}
+#read th:nth-child(4), #test_table td:nth-child(3){
+	width: 110px;
+}
+#read th:nth-child(5), #test_table td:nth-child(3){
+	width: 60px;
+}
+
