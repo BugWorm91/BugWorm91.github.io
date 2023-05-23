@@ -2,10 +2,10 @@
 <p><a href="./index.html">Computer Bug and Bookworm</a></p>
 <nav>
     <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./page/ComputerBug/index.html">Computer Bug</a></li>
-        <li><a href="./page/Bookworm/index.html">Bookworm</a></li>
-        <li><a href="./page/RandomNotes/index.html">Random Notes</a></li>
-        <li><a href="./page/Sub/about.html">About</a></li>
+        <li><a href="https://bugworm91.github.io//index.html">Home</a></li>
+        <li><a href="https://bugworm91.github.io//page/ComputerBug/index.html">Computer Bug</a></li>
+        <li><a href="https://bugworm91.github.io//page/Bookworm/index.html">Bookworm</a></li>
+        <li><a href="https://bugworm91.github.io//page/RandomNotes/index.html">Random Notes</a></li>
+        <li><a href="https://bugworm91.github.io//page/Sub/about.html">About</a></li>
     </ul>
 </nav>
