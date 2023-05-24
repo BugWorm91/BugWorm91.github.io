@@ -22,7 +22,10 @@ body{
     }
 	.area, .page_top{
 		padding: 0 48px;
-	}	
+	}
+	.page_top{
+		font-size: 50%;
+	}
 }
 @media screen and (max-width: 600px){
     #wrapper{
@@ -30,7 +33,13 @@ body{
     }
 	.area, .page_top{
 		padding: 0 18px;
-	}	
+	}
+	.page_top{
+		font-size: 80%;
+	}
+	#site_header > p > a{
+		font-size: 80%;
+	}
 }
 
 #wrapper{
