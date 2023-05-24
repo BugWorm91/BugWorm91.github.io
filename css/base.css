@@ -17,25 +17,12 @@ body{
         width: 980px;
     }
 }
-@media screen and (min-width: 601px) and (max-width: 979px){
-	body{
-		font-size: 24px;
-	}
-	h1, h2, h3, h4, h5, h6 {
-		font-size: 24px;
-	}
-	
+@media screen and (min-width: 601px) and (max-width: 979px){	
     #wrapper{
         width: 90%;
     }
 }
 @media screen and (max-width: 600px){
-	body{
-		font-size: 24px;
-	}
-	h1, h2, h3, h4, h5, h6 {
-		font-size: 24px;
-	}
     #wrapper{
         width: 95%;
     }
@@ -44,34 +31,35 @@ body{
 #site_header{
 	padding-top: 8px;
 }
-#site_header h1 a:link,
-#site_header h1 a:visited,
-#site_header h1 a:hover,
-#site_header h1 a:active,
-#site_header p a:link,
-#site_header p a:visited,
-#site_header p a:hover,
-#site_header p a:active,
-main article h2,
-main article h3{
+#site_header > h1 > a:link,
+#site_header > h1 > a:visited,
+#site_header > h1 > a:hover,
+#site_header > h1 > a:active,
+#site_header > h1 > a:link,
+#site_header > h1 > a:visited,
+#site_header > p > a:link,
+#site_header > p > a:visited,
+#site_header > p > a:hover,
+#site_header > p > a:active,
+main > article > h2,
+main > article >h3{
 	color: #ff9913;
 }
-#site_header h1 a{
+#site_header > h1 > a,#site_header > h1 > p{
 	font-weight: bold;
 	text-shadow:2px 2px 0 #999999, 2px 3px 0 #999999;
 }
-#site_header h1 a:link,
-#site_header h1 a:visited,
-#site_header h1 a:hover,
-#site_header h1 a:active,
-#site_header p a:link,
-#site_header p a:visited,
-#site_header p a:hover,
-#site_header p a:active,
+#site_header > h1 > a:link,
+#site_header > h1 > a:visited,
+#site_header > h1 > a:hover,
+#site_header > h1 > a:active,
+#site_header > p > a:link,
+#site_header > p > a:visited,
+#site_header > p > a:hover,
+#site_header > p > a:active,
 main > article > h2{
 	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
 }
-
 
 main{
 	flex: 1;
