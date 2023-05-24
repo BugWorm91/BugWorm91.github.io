@@ -102,6 +102,14 @@ main{
 	flex: 1;
 }
 
+main p{
+	line-height: 250%;
+}
+
+.area, .page_top{
+	padding: 0 48px;
+}
+
 
 /*
 @media screen and (min-width: 980px){
