@@ -9,6 +9,170 @@ body{
     #wrapper{
         width: 980px;
     }
+	.page_top{
+		font-size: 50%;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 979px){	
+    #wrapper{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 600px){
+    #wrapper{
+        width: 95%;
+    }
+}
+
+#wrapper{
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#site_header{
+	padding-top: 8px;
+}
+#site_header > h1 > a:link,
+#site_header > h1 > a:visited,
+#site_header > h1 > a:hover,
+#site_header > h1 > a:active,
+#site_header > h1 > a:link,
+#site_header > h1 > a:visited,
+#site_header > p > a:link,
+#site_header > p > a:visited,
+#site_header > p > a:hover,
+#site_header > p > a:active,
+main > article > h2,
+main > article h3{
+	color: #ff9913;
+}
+#site_header > h1 > a,#site_header > h1 > p{
+	font-weight: bold;
+	text-shadow:2px 2px 0 #999999, 2px 3px 0 #999999;
+}
+#site_header > h1 > a:link,
+#site_header > h1 > a:visited,
+#site_header > h1 > a:hover,
+#site_header > h1 > a:active,
+#site_header > p > a:link,
+#site_header > p > a:visited,
+#site_header > p > a:hover,
+#site_header > p > a:active,
+main > article > h2,
+main > article h3{
+	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
+}
+
+#site_header > nav > ul{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 24px 0;
+}
+#site_header > nav > ul >li{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+#site_header nav a{
+	display: block;
+}
+
+#site_footer{
+	text-align: center;
+	font-size: 14px;
+	margin-top: 18px;
+}
+
+main > article h2, #site_footer{
+	padding: 12px;
+	border-top: solid 1px #ff9913;
+	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
+}
+main > article h2{
+	border-bottom: solid 1px #ff9913;
+	margin-bottom: 16px;
+}
+main > article h3{
+	padding: 12px;
+	/*border-top: dashed 1px #ff9913;*/
+	border-bottom: dotted 1px #ff9913;
+	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
+	margin-bottom: 16px;
+}
+
+main{
+	flex: 1;
+}
+main p{
+	line-height: 250%;
+}
+main section+section{
+	margin-top: 36px;
+}
+
+.area, .page_top{
+	padding: 0 48px;
+}
+.page_top{
+	text-align: right;
+}
+.page_top a{
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+	font-weight:bold;
+	color: #FFFFFF;
+    padding: 3px 8px;
+}
+.page_top a{
+	background-color: #ffc579;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc579), to(#fb9d23));
+	background-image: -webkit-linear-gradient(top, #ffc579, #fb9d23);
+	background-image: -moz-linear-gradient(top, #ffc579, #fb9d23);
+	background-image: -ms-linear-gradient(top, #ffc579, #fb9d23);
+	background-image: -o-linear-gradient(top, #ffc579, #fb9d23);
+	background-image: linear-gradient(to bottom, #ffc579, #fb9d23);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffc579, endColorstr=#fb9d23);
+}
+.page_top a:hover{
+	background-color: #00ffff;
+	background-color: #ffaf46; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffaf46), to(#e78404));
+	background-image: -webkit-linear-gradient(top, #ffaf46, #e78404);
+	background-image: -moz-linear-gradient(top, #ffaf46, #e78404);
+	background-image: -ms-linear-gradient(top, #ffaf46, #e78404);
+	background-image: -o-linear-gradient(top, #ffaf46, #e78404);
+	background-image: linear-gradient(to bottom, #ffaf46, #e78404);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffaf46, endColorstr=#e78404);
+}
+.page_top a{
+	border: solid 1px #ff9913;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.source{
+    text-align: right;
+    font-size: 80%;
+}
+
+main article table{
+	border-top: solid 1px #333333;
+	border-left: solid 1px #333333;
+}
+main article table th, main article table td{
+	border-right: solid 1px #333333;
+	border-bottom: solid 1px #333333;
+}
+main article table th{
+	background-color: #ffc579;
+}
+
+
+/*
+@media screen and (min-width: 980px){
+    #wrapper{
+        width: 980px;
+    }
 
 	main article p, main article time, main article ul, main article h4, .page_top,
 	section dl dt, section dl dd,.source, #book footer{
@@ -67,12 +231,10 @@ main article h2,
 main article h3{
 	color: #ff9913;
 }
-
 #site_header h1 a{
 	font-weight: bold;
 	text-shadow:2px 2px 0 #999999, 2px 3px 0 #999999;
 }
-
 #site_header h1 a:link,
 #site_header h1 a:visited,
 #site_header h1 a:hover,
@@ -141,11 +303,15 @@ main article ul li{
 	padding: 0 32px;
 }
 
+*/
+
 /*
 main article table{
     font-size: 12px;
 }
 */
+
+/*
 main article table{
 	border-top: solid 1px #333333;
 	border-left: solid 1px #333333;
@@ -269,4 +435,6 @@ fieldset{
 #read th:nth-child(5), #test_table td:nth-child(3){
 	width: 60px;
 }
+
+*/
 
