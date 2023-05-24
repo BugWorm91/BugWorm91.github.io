@@ -3,6 +3,9 @@
 body{
 	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 	overflow-y: scroll;
+	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
 }
 
 #wrapper{
@@ -10,10 +13,6 @@ body{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	text-size-adjust: none;
-	-webkit-text-size-adjust: none;
-	-moz-text-size-adjust: none;
-	-ms-text-size-adjust: none;
 }
 
 @media screen and (min-width: 980px){
@@ -28,7 +27,7 @@ body{
 }
 @media screen and (max-width: 600px){
     #wrapper{
-        width: 600px;
+        width: 95%;
     }
 }
 
