@@ -37,7 +37,7 @@ body{
 	.page_top{
 		font-size: 80%;
 	}
-	#site_header > p > a{
+	#site_header > nav a{
 		font-size: 80%;
 	}
 }
