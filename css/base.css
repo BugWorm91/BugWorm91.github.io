@@ -86,7 +86,7 @@ main > article h3{
 	margin-top: 18px;
 }
 
-main > article > h2, #site_footer{
+main > article h2, #site_footer{
 	padding: 12px;
 	border-top: solid 1px #ff9913;
 	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
@@ -97,7 +97,7 @@ main > article h2{
 }
 main > article h3{
 	padding: 12px;
-	border-top: dotted 1px #ff9913;
+	/*border-top: dashed 1px #ff9913;*/
 	border-bottom: dotted 1px #ff9913;
 	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
 	margin-bottom: 16px;
@@ -111,14 +111,6 @@ main p{
 }
 main section+section{
 	margin-top: 36px;
-}
-
-main article h3{
-	padding: 12px;
-	border-top: dotted 1px #ff9913;
-	border-bottom: dotted 1px #ff9913;
-	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
-	margin-bottom: 16px;
 }
 
 .area, .page_top{
@@ -158,6 +150,10 @@ main article h3{
 	-moz-border-radius: 3px;
 }
 
+.source{
+    text-align: right;
+    font-size: 80%;
+}
 
 /*
 @media screen and (min-width: 980px){
