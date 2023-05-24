@@ -2,6 +2,7 @@
 
 body{
 	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+	overflow-y: scroll;
 }
 
 @media screen and (min-width: 980px){
@@ -49,6 +50,7 @@ body{
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
+	min-height: 100vh;
 }
 
 #site_header{
