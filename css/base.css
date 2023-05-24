@@ -12,16 +12,25 @@ body{
 	.page_top{
 		font-size: 50%;
 	}
+	.area, .page_top{
+		padding: 0 48px;
+	}	
 }
 @media screen and (min-width: 601px) and (max-width: 979px){	
     #wrapper{
         width: 90%;
     }
+	.area, .page_top{
+		padding: 0 48px;
+	}	
 }
 @media screen and (max-width: 600px){
     #wrapper{
         width: 95%;
     }
+	.area, .page_top{
+		padding: 0 18px;
+	}	
 }
 
 #wrapper{
@@ -113,9 +122,6 @@ main section+section{
 	margin-top: 36px;
 }
 
-.area, .page_top{
-	padding: 0 48px;
-}
 .page_top{
 	text-align: right;
 }
