@@ -35,10 +35,14 @@ body{
 		padding: 0 18px;
 	}
 	.page_top{
-		font-size: 80%;
+		font-size: 70%;
 	}
 	#site_header > nav a{
 		font-size: 80%;
+	}
+	table {
+		display: block;
+		overflow-x: auto;
 	}
 }
 
