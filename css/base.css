@@ -28,9 +28,41 @@ body{
 }
 @media screen and (max-width: 600px){
     #wrapper{
-        width: 95%;
+        width: 600px;
     }
 }
+
+#site_header{
+	padding-top: 8px;
+}
+#site_header h1 a:link,
+#site_header h1 a:visited,
+#site_header h1 a:hover,
+#site_header h1 a:active,
+#site_header p a:link,
+#site_header p a:visited,
+#site_header p a:hover,
+#site_header p a:active,
+main article h2,
+main article h3{
+	color: #ff9913;
+}
+#site_header h1 a{
+	font-weight: bold;
+	text-shadow:2px 2px 0 #999999, 2px 3px 0 #999999;
+}
+#site_header h1 a:link,
+#site_header h1 a:visited,
+#site_header h1 a:hover,
+#site_header h1 a:active,
+#site_header p a:link,
+#site_header p a:visited,
+#site_header p a:hover,
+#site_header p a:active,
+main > article > h2{
+	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
+}
+
 
 main{
 	flex: 1;
@@ -100,12 +132,10 @@ main article h2,
 main article h3{
 	color: #ff9913;
 }
-
 #site_header h1 a{
 	font-weight: bold;
 	text-shadow:2px 2px 0 #999999, 2px 3px 0 #999999;
 }
-
 #site_header h1 a:link,
 #site_header h1 a:visited,
 #site_header h1 a:hover,
