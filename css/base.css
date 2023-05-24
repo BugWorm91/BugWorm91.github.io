@@ -45,7 +45,7 @@ body{
 #site_header > p > a:hover,
 #site_header > p > a:active,
 main > article > h2,
-main > article >h3{
+main > article h3{
 	color: #ff9913;
 }
 #site_header > h1 > a,#site_header > h1 > p{
@@ -60,7 +60,8 @@ main > article >h3{
 #site_header > p > a:visited,
 #site_header > p > a:hover,
 #site_header > p > a:active,
-main > article > h2{
+main > article > h2,
+main > article h3{
 	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
 }
 
@@ -110,6 +111,14 @@ main p{
 }
 main section+section{
 	margin-top: 36px;
+}
+
+main article h3{
+	padding: 12px;
+	border-top: dotted 1px #ff9913;
+	border-bottom: dotted 1px #ff9913;
+	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
+	margin-bottom: 16px;
 }
 
 .area, .page_top{
