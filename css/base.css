@@ -186,6 +186,26 @@ main article table th, main article table td{
 main article table th{
 	background-color: #ffc579;
 }
+main article table td, main article table th{
+	font-size: 14px;
+	padding: 6px;
+}
+.row-deco tr:nth-child(2n){
+	background-color: #fce8ce;
+}
+
+.area li,.area dd+dt,.area dd+dd{
+	margin-top: 32px;
+}
+.area dl+dl{
+	margin-top: 60px;
+}
+.area dt{
+	margin-bottom: 12px;
+}
+.area dd{
+	margin-left: 1em;
+}
 
 
 /*
