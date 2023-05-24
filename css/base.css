@@ -5,13 +5,6 @@ body{
 	overflow-y: scroll;
 }
 
-#wrapper{
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
 @media screen and (min-width: 980px){
     #wrapper{
         width: 980px;
@@ -26,6 +19,13 @@ body{
     #wrapper{
         width: 95%;
     }
+}
+
+#wrapper{
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 #site_header{
@@ -59,6 +59,28 @@ main > article >h3{
 #site_header > p > a:active,
 main > article > h2{
 	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
+}
+
+#site_footer{
+	text-align: center;
+	font-size: 14px;
+}
+
+main > article > h2, #site_footer{
+	padding: 12px;
+	border-top: solid 1px #ff9913;
+	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
+}
+main > article h2{
+	border-bottom: solid 1px #ff9913;
+	margin-bottom: 16px;
+}
+main > article h3{
+	padding: 12px;
+	border-top: dotted 1px #ff9913;
+	border-bottom: dotted 1px #ff9913;
+	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
+	margin-bottom: 16px;
 }
 
 main{
