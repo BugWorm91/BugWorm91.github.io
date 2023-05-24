@@ -61,6 +61,21 @@ main > article > h2{
 	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
 }
 
+#site_header > nav > ul{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 24px 0;
+}
+#site_header > nav > ul >li{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+#site_header nav a{
+	display: block;
+}
+
 #site_footer{
 	text-align: center;
 	font-size: 14px;
