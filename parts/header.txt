@@ -1,11 +1,11 @@
-<h1><a href="https://bugworm91.github.io//index.html">コンピューターバグと本の虫</a></h1>
-<p><a href="https://bugworm91.github.io//index.html">Computer Bug and Bookworm</a></p>
+<h1><a href="https://bugworm91.github.io/index.html">コンピューターバグと本の虫</a></h1>
+<p><a href="https://bugworm91.github.io/index.html">Computer Bug and Bookworm</a></p>
 <nav>
     <ul>
-        <li><a href="https://bugworm91.github.io//index.html">Home</a></li>
-        <li><a href="https://bugworm91.github.io//page/computer-bug/index.html">Computer Bug</a></li>
-        <li><a href="https://bugworm91.github.io//page/bookworm/index.html">Bookworm</a></li>
-        <li><a href="https://bugworm91.github.io//page/random-notes/index.html">Random Notes</a></li>
-        <li><a href="https://bugworm91.github.io//page/about/index.html">About</a></li>
+        <li><a href="https://bugworm91.github.io/index.html">Home</a></li>
+        <li><a href="https://bugworm91.github.io/page/computer-bug/index.html">Computer Bug</a></li>
+        <li><a href="https://bugworm91.github.io/page/bookworm/index.html">Bookworm</a></li>
+        <li><a href="https://bugworm91.github.io/page/random-notes/index.html">Random Notes</a></li>
+        <li><a href="https://bugworm91.github.io/page/about/index.html">About</a></li>
     </ul>
 </nav>
