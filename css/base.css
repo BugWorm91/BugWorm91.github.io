@@ -128,8 +128,11 @@ main > article h3{
 main{
 	flex: 1;
 }
-main p{
-	line-height: 250%;
+main p, li, dd{
+	line-height: 160%;
+}
+main p+p{
+	margin-top: 18px;
 }
 main section+section{
 	margin-top: 36px;
@@ -194,9 +197,6 @@ main article table td, main article table th{
 	background-color: #fce8ce;
 }
 
-li, dd{
-	line-height: 140%;
-}
 .area li,.area dd+dt,.area dd+dd{
 	margin-top: 32px;
 }
