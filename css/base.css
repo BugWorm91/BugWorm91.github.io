@@ -207,6 +207,20 @@ main article table td, main article table th{
 	margin-left: 1em;
 }
 
+#book footer{
+    text-align: right;
+    font-size: 14px;
+	margin-bottom: 64px;
+}
+#book h4{
+	padding: 12px;
+	font-weight: bold;
+}
+
+.rare{
+	color: red;
+}
+
 
 /*
 @media screen and (min-width: 980px){
