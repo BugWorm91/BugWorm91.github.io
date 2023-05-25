@@ -128,7 +128,7 @@ main > article h3{
 main{
 	flex: 1;
 }
-main p, li, dd{
+main p, main li, main dd{
 	line-height: 160%;
 }
 main p+p{
