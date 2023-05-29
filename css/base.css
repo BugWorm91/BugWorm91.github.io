@@ -210,6 +210,10 @@ main article table td, main article table th{
 	margin-left: 1em;
 }
 
+.area p+table{
+	margin-top: 18px;
+}
+
 #book footer{
     text-align: right;
     font-size: 14px;
@@ -222,4 +226,10 @@ main article table td, main article table th{
 
 .rare{
 	color: red;
+}
+
+time{
+	font-size: 80%;
+	text-align: right;
+	display: block;
 }
