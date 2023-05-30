@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="../../../img/parts/favicon.ico">
     <link type="text/css" rel="stylesheet" href="../../../css/initialize.css">
     <link type="text/css" rel="stylesheet" href="../../../css/base.css">
+    <link type="text/css" rel="stylesheet" href="../../../css/code.css">
     <script src="../../../js/common.js"></script>
     <script src="../../../js/base.js"></script>
     <title>C&#035;概要 | Computer Bug | コンピューターバグと本の虫</title>
@@ -23,11 +24,16 @@
         <section>
             <h3>Index</h3>
             <div class="area">
+                <ul>
+                    <li><a href="#csharp001">C&#035;とは</a></li>
+                    <li><a href="#csharp002">C&#035;のバージョン</a></li>
+                    <li><a href="#csharp003">テキストファイルから始めるC&#035;</a></li>
+                </ul>
             </div>
             <div class="page_top"><a href="#">▲</a></div>
         </section>
         <section>
-            <h3>C&#035;とは</h3>
+            <h3 id="csharp001">C&#035;とは</h3>
             <div class="area">
                 <time>2023/05/29</time>
                 <p>　C#(シーシャープ)は Microsoft が開発したアプリケーションソフトを作成するためのプログラミング言語です。Microsoft の Visual Studio という統合開発環境(<abbr title="Integrated Development Environment">IDE</abbr>)で開発するのが一般的で、その場合は Visual C# と呼ばれます。</p>
@@ -37,11 +43,11 @@
             <div class="page_top"><a href="#">▲</a></div>
         </section>
         <section>
-            <h3>C&#035;のバージョン</h3>
+            <h3 id="csharp002">C&#035;のバージョン</h3>
             <div class="area">
                 <time>2023/05/29</time>
-                <p>　C#は日々進化しており、次々と新しい機能が追加されたバージョンが公開されています。C#だけでなく Visual Studio や .NET(昔は違う名前でした。突然名前が変わったりもします。)、 Windows も日々進化しており、それぞれが複雑に絡み合っていてバージョンが非常に分かりづらい状態にあります。</p>
-                <p>　基本的には下位互換があるので古いバージョンの書き方はそのまま使えます。バージョンが新しくなるにつれてプログラムを省略して書けるよう進化している印象です。</p>
+                <p>　C#は日々進化しており、次々と新しい機能が追加されたバージョンが公開されています。C#だけでなく Visual Studio や .NET、 Windows も日々進化しており、それぞれが複雑に絡み合っていてバージョンが非常に分かりづらい状態にあります。.NET という名称も .NET Framework → .NET Core → .NET のように突然変わったりもします。</p>
+                <p>　基本的には下位互換があるので古いバージョンの書き方はそのまま使えます。バージョンが新しくなるにつれてできることが増えたりプログラムを省略して書けるよう進化しているイメージです。</p>
 				<p>　理由がなければ一番新しいものを覚えていけば良いですが、 .NET のバージョンアップができていないシステムも多く、場合によっては古い書き方を強いられることもあるのでバージョンを意識して覚えておくと役に立つことがあるかもしれません。</p>
                 <table class="row-deco">
                     <caption>C#のバージョンと.NETの関係</Frame></caption>
@@ -52,10 +58,10 @@
                         <tr><td>11</td><td>2022年11月</td><td>.NET 7</td></tr>
                         <tr><td>10</td><td>2021年11月</td><td>.NET 6</td></tr>
                         <tr><td>9</td><td>2020年11月</td><td>.NET 5</td></tr>
-                        <tr><td>8.0</td><td>2019年09月</td><td>.NET Core 3</td></tr>
-                        <tr><td>7.3</td><td>2018年05月</td><td>.NET Framework 4.8<br>.NET Core 2</td></tr>
-                        <tr><td>7.2</td><td>2017年11月</td><td>?</td></tr>
-                        <tr><td>7.1</td><td>2017年08月</td><td>?</td></tr>
+                        <tr><td>8.0</td><td>2019年09月</td><td>.NET Core 3.0</td></tr>
+                        <tr><td>7.3</td><td>2018年05月</td><td>.NET Framework 4.8<br>.NET Core 2.2</td></tr>
+                        <tr><td>7.2</td><td>2017年11月</td><td>.NET Framework 4.7<br>.NET Core 2.1</td></tr>
+                        <tr><td>7.1</td><td>2017年08月</td><td>.NET Framework 4.7<br>.NET Core 1.0</td></tr>
                         <tr><td>7.0</td><td>2017年03月</td><td>.NET Framework 4.7</td></tr>
                         <tr><td>6.0</td><td>2015年07月</td><td>.NET Framework 4.6</td></tr>
                         <tr><td>5.0</td><td>2012年08月</td><td>.NET Framework 4.5</td></tr>
@@ -70,13 +76,130 @@
             <div class="page_top"><a href="#">▲</a></div>
         </section>
         <section>
-            <h3>テキストファイルから始めるC&#035;</h3>
+            <h3 id="csharp003">テキストファイルから始めるC&#035;</h3>
             <div class="area">
-                <time>2023/05/29</time>
+				<time>2020/07/12</time>
+				<p>　C#でアプリケーションを作成する場合、基本的には Microsoft の Visual Studio という統合開発環境(<abbr title="Integrated Development Environment">IDE</abbr>)をインストールして使用することになりますが、実は Visual Studio が無くてもアプリケーションを作ることができます。</p>
+
+				<section>
+					<h4>ソースコードとコンパイラー</h4>
+					<p>　まず適当なフォルダを作ります。例としてここでは Dドライブ に test というフォルダ(D:\test)を作りました。</p>
+					<p>　メモ帳などのテキストエディタに下記の内容をそのままコピーして HelloWorld.cs という名前で作ったフォルダに保存してください。</p>
+<pre class="source_code"><code>namespace HeloWorld
+{
+    class Program
+    {
+        static void Main()
+        {
+            System.Console.WriteLine("Hello World");
+            System.Console.ReadKey(true);
+        }
+    }
+}
+</code></pre>
+                    <p>　これがC#のソースコードです。残念ながらコンピューターはこのソースコードを直接解読して実行することはできません。ファイルの拡張子をを .cs ではなく .exe にしてもエラーになります。</p>
+                    <p>　ソースコードはあくまでも人間用の形式なので、これをコンピューターが実行できる形式に変換する必要があります。</p>
+                    <p>　C#に限った話ではありませんが、大抵のプログラミング言語にはソースコードをコンピューターが実行可能な状態に変換するコンパイラーというものが用意されています。</p>
+                    <p>　C#のコンパイラーは csc.exe という名前で Windows には標準で含まれているはずです。環境によって異なるかもしれませんが、私の環境では下記のフォルダの中に csc.exe がありました。</p>                   
+<pre class="source_code"><code>C:\Windows\Microsoft.NET\Framework64
+    (---省略---)
+    ├ v2.0.50727
+    │  └ csc.exe
+    ├ v3.0
+    ├ v3.5
+    │  └ csc.exe
+    └ v4.0.30319
+        └ csc.exe
+</code></pre>                        
+                    <p>　v3.0 や v3.5 のようにフォルダが分かれていますが、これは .NET Framework のバージョンです。基本的にはバージョンが一番新しいものを使えば問題ありません。 v4.0.30319 にある csc.exe を使います。</p>
+                    <p>　他のバージョンのものを使っても基本的には同じになるはずなので v4.0.30319 がない場合は v3.5 や新しいバージョンの csc.exe でも問題ありません。</p>
+                </section>
+            </div>
+            <div class="page_top"><a href="#">▲</a></div>
+        </section>
+        <section>
+            <div class="area">
+                <h4>ソースコードのコンパイルと実行</h4>
+                <p>　コンパイルを行うにはコマンドプロンプトを使用します。cd コマンドで HelloWorld.cs を置いたフォルダに移動します。</p>
+<pre class="source_code"><code>C:\Users\○○○&gt;cd /d D:\test
+</code></pre>          
+               <p>　そして下記コマンドを実行するとコンパイルが実行され、 HelloWorld.cs と同じフォルダに HelloWorld.exe が作成されます。</p>
+               <p>C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe の部分は自分の環境に合わせて読み替えてください。</p>
+<pre class="source_code"><code>D:\test&gt;C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe HelloWorld.cs
+</code></pre>
+                <p>　HelloWorld.exe を実行してみましょう。コマンドプロンプトのような黒いウィンドウに『Hello World』と表示されるはずです。何かキーを押すとウィンドウが閉じてアプリケーションが終了します。</p>     
+<pre class="source_code output"><code>Hello World
+</code></pre>
+                <p>　そもそもテキストとして見るものではありませんが HelloWorld.exe をメモ帳やテキストエディタで開いてみると文字化けのようになっていると思います。これがコンパイラーによってコンピューターが実行可能な状態に変換された状態になります。</p>
+                <p>　厳密には<abbr title="Intermediate Language">IL</abbr>と呼ばれる中間言語に変換された状態で、この<abbr title="Intermediate Language">IL</abbr>がプログラムの実行時に .NET Framework に含まれる 共通言語ランタイム(<abbr title="Common Language Runtime">CLR</abbr>) にコンパイルされながら動いているそうです。</p>
             </div>
             <div class="page_top"><a href="#">▲</a></div>
         </section>
 
+        <section>
+            <div class="area">
+                <h4>グラフィカルなアプリケーション</h4>
+                <p>　今作成したのは<abbr title="Character User Interface">CUI</abbr>という文字ベースで動作するアプリケーションで、コンソールアプリケーションと呼ばれています。</p>
+                <p>　ウィンドウの中にテキストボックスやボタンがあるアプリケーションもそのようにソースコードを書けば当然作成できます。</p>
+                <p>　HelloWorld.cs と同じフォルダに HelloWorld2.cs というファイルを作り、下記のソースコードをそのまま貼り付けて保存してみてください。</p>
+<pre class="source_code"><code>using System;
+using System.Windows.Forms;
+
+namespace HeloWorld
+{
+    class TestForm : Form {
+        [STAThread]
+        static void Main()
+        {
+            Application.Run(new TestForm());
+        }
+
+        public TestForm(){
+            // ウィンドウを 300pixel × 300pixel にする
+            ClientSize = new System.Drawing.Size(300, 300);
+            // ウィンドウに Hello World2 と表示する
+            Text = "Hello World2";
+
+            // テキストボックス生成
+            TextBox testTextBox = new TextBox();
+            testTextBox.Location = new System.Drawing.Point(10, 30);
+            testTextBox.Margin = new System.Windows.Forms.Padding(4);
+            testTextBox.Name = "testTextBox";
+            testTextBox.Size = new System.Drawing.Size(132, 23);
+            testTextBox.TabIndex = 0;
+            this.Controls.Add(testTextBox);
+
+            // ボタン生成
+            Button testButton = new Button();
+            testButton.Location = new System.Drawing.Point(150, 28);
+            testButton.Margin = new System.Windows.Forms.Padding(4);
+            testButton.Name = "testButton";
+            testButton.Size = new System.Drawing.Size(100, 23);
+            testButton.TabIndex = 1;
+            testButton.Text = "ボタン！";
+            testButton.UseVisualStyleBackColor = true;
+            this.Controls.Add(testButton);
+        }
+    }
+}
+</code></pre>
+
+                <p>　先ほどの HelloWorld2.cs と同様にコンパイルを行います。cd コマンドで HelloWorld2.cs を置いたフォルダに移動します。</p>
+<pre class="source_code"><code>C:\Users\○○○&gt;cd /d D:\test
+</code></pre>
+                <p>　下記コマンドを実行するとコンパイルが実行され、 HelloWorld2.cs と同じフォルダに HelloWorld2.exe が作成されます。</p>
+                <p>　今回は『/t:winexe』というオプションを追記しているので注意してください。</p>
+<pre class="source_code"><code>D:\test&gt;C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe /t:winexe HelloWorld2.cs
+</code></pre>
+                <p>　作成された HelloWorld2.exe を実行すると下記のようなウィンドウ(Form)が表示されます。</p>
+                <p>　処理の内容を書いていないためボタンをクリックしても何も起こりませんが、当然ボタンをクリックしたときの処理を書けば書いたとおりに動くようになります。</p>
+                <br>
+                <div><img src="../../../img/computer-bug/csharp/basics_000.png" alt="HelloWorld2"></div>
+                <br>
+                <p>　このように Visual Studio が無くてもC#のプログラム(アプリケーション)を作成することができます。</p>
+            </div>
+            <div class="page_top"><a href="#">▲</a></div>
+        </section>
     </article>    
 </main>
 <footer id="site_footer"></footer>
