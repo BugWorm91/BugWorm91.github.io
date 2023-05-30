@@ -124,6 +124,10 @@ main > article h3{
 	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
 	margin-bottom: 16px;
 }
+main > article h4 {
+    padding: 36px 12px 12px 0;
+    font-weight: 800;
+}
 
 main{
 	flex: 1;
