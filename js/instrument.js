@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function(){
         document.getElementById("utcToday").innerHTML = "協定世界時(UTC)<br>" + utcYear + "/" + utcMonth + "/" + utcDate + " " + utcHours + ":" + utcMinutes + ":" + utcSeconds + "<br>" + utcWeek + "曜日";
 
         document.getElementById("era").innerHTML = "令和" + era + "年";
-        document.getElementById("lastOfMonth").innerHTML = "月末" + lastOfMonth.getDate() + "日<br>" + weeks[today.getDay()] + "曜日";
+        document.getElementById("lastOfMonth").innerHTML = "月末" + lastOfMonth.getDate() + "日<br>" + weeks[lastOfMonth.getDay()] + "曜日";
         document.getElementById("leapYear").innerHTML = "うるう年<br>" + isLeapYear;
         document.getElementById("zodiac").innerHTML = zodiac + "年";
         document.getElementById("days").innerHTML = "今年残り<br>" + days + "日";
