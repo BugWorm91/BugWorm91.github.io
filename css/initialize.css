@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, button, textarea, p, blockquote, th, td, legend {
+	margin: 0;
+	padding: 0;
+	word-wrap: break-word;
+}
+
+body{
+	color: #333333;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 100%;
+}
+
+img{
+	max-width:100%;
+	height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+}
+
+caption {
+	text-align: left;
+}
+
+th {
+	text-align: center;
+}
+
+th, td {
+	padding: 0 3px;
+}
+
+fieldset, img { 
+	border: 0;
+	vertical-align: bottom;
+}
+
+img {
+	line-height: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+	list-style-position: outside;
+}
+
+q:before, q:after {
+	content: '';
+}
+
+abbr, acronym {
+	text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active{
+	text-decoration: none;
+	outline: none; /* タブキーを使ってリンクを辿る際、どこにフォーカスしているかわからなくなる。 */
+}
+
+a:link {
+	color: #0000ff;
+}
+
+a:visited {
+	color: #810081;
+}
+
+a:hover {
+	color: #0000ff;
+}
+
+a:active {
+	color: #0000ff;
+}
+
+sup, sub {
+	font-size: 75%;
+	line-height: 100%;
+}
+
+sup {
+	vertical-align: text-top;
+}
+
+sub {
+	vertical-align: text-bottom;
+}
+
+input, button, select {
+	outline: none; /*タブキーを使ってリンクを辿る際、どこにフォーカスしているかわからなくなる。*/
+}
+
+/* Mozilla */
+button: -moz-focus-inner {
+	border-style: none;
+}
+
+/* HTML5 */
+article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
