@@ -122,11 +122,6 @@ main > article h2{
 	padding: 8px 0;
 }
 
-
-
-
-
-
 .displayBoard{
 	padding: 8px 0;
 	overflow: hidden;
@@ -156,17 +151,6 @@ main > article h2{
 	border-radius: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .button{
 	color: #fff;
 	border-top: 3px solid #fdc03b;
@@ -185,12 +169,6 @@ main > article h2{
 }
 
 
-
-
-
-
-
-
 table{
 	border-top: solid 1px #333333;
 	border-left: solid 1px #333333;
@@ -199,14 +177,18 @@ table{
 th, td{
 	border-right: solid 1px #333333;
 	border-bottom: solid 1px #333333;
+	padding: 3px 3px;
 }
 th{
 	background-color: #ffc579;
-}
-th{
 	font-size: 14px;
 	padding: 6px;
 }
 .row-deco tr:nth-child(2n){
 	background-color: #fce8ce;
+}
+
+
+dialog > button{
+	width: 100%;
 }
