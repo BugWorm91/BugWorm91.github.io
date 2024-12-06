@@ -110,12 +110,7 @@ input, button, select {
 	outline: none; /*タブキーを使ってリンクを辿る際、どこにフォーカスしているかわからなくなる。*/
 }
 
-/* Mozilla */
-button: -moz-focus-inner {
-	border-style: none;
-}
-
 /* HTML5 */
-article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
+article, aside, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }

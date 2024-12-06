@@ -21,6 +21,28 @@ body{
     }
 }
 
+.hidden{
+	display: none;
+}
+
+.loading{
+	display: inline-block;
+	vertical-align: middle;
+	color: #666;
+	line-height: 1;
+	width: 1em;
+	height: 1em;
+	border: 0.12em solid currentColor;
+	border-top-color: rgba(102, 102, 102, 0.3);
+	border-radius: 50%;
+	box-sizing: border-box;
+	animation: loading 1s linear infinite;
+}
+@keyframes loading{
+	0% {transform: rotate(0);}
+	100% {transform: rotate(360deg);}
+}
+
 #wrapper{
 	margin: 0 auto;
 	display: flex;
@@ -84,8 +106,6 @@ main > article h2{
 	margin-bottom: 16px;
 }
 
-
-
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -93,9 +113,7 @@ main > article h2{
 	margin-bottom: 8px;
 }  
 .gridItem{
-	border-radius: 5px;
 	width: 100%;
-	border: 1px solid #999;
 	display: grid;
 	justify-content: center;
 	align-content: center;
@@ -104,12 +122,8 @@ main > article h2{
 	padding: 8px 0;
 }
 
-#dateTime > .gridItem{
-	min-height: 5em;
-}
-#instrument > .gridItem{
-	min-height: 3em;
-}
+
+
 
 
 
@@ -131,29 +145,15 @@ main > article h2{
 	100% { transform: translate(-100%); }
 }
 
-.hidden{
-	display: none;
+#instrumentDateTime > .gridItem{
+	min-height: 5em;
+	border: 1px solid #999;
+	border-radius: 5px;
 }
-
-
-
-
-.loading{
-	display: inline-block;
-	vertical-align: middle;
-	color: #666;
-	line-height: 1;
-	width: 1em;
-	height: 1em;
-	border: 0.12em solid currentColor;
-	border-top-color: rgba(102, 102, 102, 0.3);
-	border-radius: 50%;
-	box-sizing: border-box;
-	animation: rotate 1s linear infinite;
-}
-@keyframes rotate {
-	0% {transform: rotate(0);}
-	100% {transform: rotate(360deg);}
+#instrument > .gridItem{
+	min-height: 3em;
+	border: 1px solid #999;
+	border-radius: 5px;
 }
 
 
@@ -161,7 +161,13 @@ main > article h2{
 
 
 
-.btn-gradation{
+
+
+
+
+
+
+.button{
 	color: #fff;
 	border-top: 3px solid #fdc03b;
 	border-right: 3px solid #a5a5a5;
@@ -170,11 +176,37 @@ main > article h2{
 	border-radius: 100px;
 	background: #ff9913;
 }
-  
-.btn-gradation:hover {
+.button:hover {
 	color: #0000ff;
 	border-top: 3px solid #a5a5a5;
 	border-right: 3px solid #fdc03b;
 	border-bottom: 3px solid #fdc03b;
 	border-left: 3px solid #a5a5a5;
+}
+
+
+
+
+
+
+
+
+table{
+	border-top: solid 1px #333333;
+	border-left: solid 1px #333333;
+	margin-bottom: 38px;
+}
+th, td{
+	border-right: solid 1px #333333;
+	border-bottom: solid 1px #333333;
+}
+th{
+	background-color: #ffc579;
+}
+th{
+	font-size: 14px;
+	padding: 6px;
+}
+.row-deco tr:nth-child(2n){
+	background-color: #fce8ce;
 }
