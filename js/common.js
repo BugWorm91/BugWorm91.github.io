@@ -8,3 +8,17 @@ function addHiddenSwitch(controlElement, targetElement){
         }               
     });
 }
+
+function setDialog(baseElementName){
+    let dialog = document.getElementById(baseElementName + 'Dialog');
+    let btn_show = document.getElementById(baseElementName);
+    let btn_close = document.getElementById(baseElementName + 'Close');
+
+    btn_show.addEventListener('click', function() {
+      dialog.showModal();
+    }, false);
+    btn_close.addEventListener('click', function() {
+      dialog.close();
+    }, false);
+}
+
