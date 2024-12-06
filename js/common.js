@@ -16,6 +16,7 @@ function setDialog(baseElementName){
 
     btn_show.addEventListener('click', function() {
       dialog.showModal();
+      dialog.scrollTop = 0;
     }, false);
     btn_close.addEventListener('click', function() {
       dialog.close();
