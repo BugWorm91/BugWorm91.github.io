@@ -44,7 +44,7 @@
             <div class="grid">
                 <div id="prefectures" class="gridItem button">都道府県</div>
                 <div id="numbersUnit" class="gridItem button">数字の単位</div>
-                <div class="gridItem button">準備中</div>
+                <div id="dataUnit" class="gridItem button">データの単位</div>
             </div>
             <div class="grid">
                 <div class="gridItem button">準備中</div>
@@ -61,7 +61,7 @@
 </main>
 <footer id="site_footer"></footer>
 </div>
-<dialog id="prefecturesDialog" style="max-height: 80%; max-width: 80%;">
+<dialog id="prefecturesDialog">
     <table>
         <caption>47都道府県(1都1道2府43県)</caption>
         <thead>
@@ -119,45 +119,85 @@
     </table>
     <button id="prefecturesClose">閉じる</button>
 </dialog>
-<dialog id="numbersUnitDialog" style="max-height: 80%; max-width: 80%;">
+<dialog id="numbersUnitDialog">
     <table class="row-deco">
         <caption>数字の単位</Frame></caption>
         <thead>
             <tr><th>桁数</th><th>単位</th><th>数字</th></tr>
         </thead>
         <tbody>
-            <tr><td>1</td><td>一</td><td class="alignRight">1</td></tr>
-            <tr><td>2</td><td>十</td><td class="alignRight">10</td></tr>
-            <tr><td>3</td><td>百</td><td class="alignRight">100</td></tr>
-            <tr><td>4</td><td>千</td><td class="alignRight">1,000</td></tr>
-            <tr><td>5</td><td>万</td><td class="alignRight">10,000</td></tr>
-            <tr><td>6</td><td>十万</td><td class="alignRight">100,000</td></tr>
-            <tr><td>7</td><td>百万</td><td class="alignRight">1,000,000</td></tr>
-            <tr><td>8</td><td>千万</td><td class="alignRight">10,000,000</td></tr>
-            <tr><td>9</td><td>一億</td><td class="alignRight">100,000,000</td></tr>
-            <tr><td>10</td><td>十億</td><td class="alignRight">1,000,000,000</td></tr>
-            <tr><td>11</td><td>百億</td><td class="alignRight">10,000,000,000</td></tr>
-            <tr><td>12</td><td>千億</td><td class="alignRight">100,000,000,000</td></tr>
-            <tr><td>13</td><td>一兆</td><td class="alignRight">1,000,000,000,000</td></tr>
-            <tr><td>14</td><td>十兆</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>15</td><td>百兆</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>16</td><td>千兆</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>17</td><td>一京</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>18</td><td>十京</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>19</td><td>百京</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>20</td><td>千京</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>21</td><td>一垓</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>22</td><td>十垓</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>23</td><td>百垓</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>24</td><td>千垓</td><td class="alignCenter">(省略)</td></tr>
-            <tr><td>25</td><td>一𥝱</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">1</td><td>一</td><td class="alignRight">1</td></tr>
+            <tr><td class="alignRight">2</td><td>十</td><td class="alignRight">10</td></tr>
+            <tr><td class="alignRight">3</td><td>百</td><td class="alignRight">100</td></tr>
+            <tr><td class="alignRight">4</td><td>千</td><td class="alignRight">1,000</td></tr>
+            <tr><td class="alignRight">5</td><td>万</td><td class="alignRight">10,000</td></tr>
+            <tr><td class="alignRight">6</td><td>十万</td><td class="alignRight">100,000</td></tr>
+            <tr><td class="alignRight">7</td><td>百万</td><td class="alignRight">1,000,000</td></tr>
+            <tr><td class="alignRight">8</td><td>千万</td><td class="alignRight">10,000,000</td></tr>
+            <tr><td class="alignRight">9</td><td>一億</td><td class="alignRight">100,000,000</td></tr>
+            <tr><td class="alignRight">10</td><td>十億</td><td class="alignRight">1,000,000,000</td></tr>
+            <tr><td class="alignRight">11</td><td>百億</td><td class="alignRight">10,000,000,000</td></tr>
+            <tr><td class="alignRight">12</td><td>千億</td><td class="alignRight">100,000,000,000</td></tr>
+            <tr><td class="alignRight">13</td><td>一兆</td><td class="alignRight">1,000,000,000,000</td></tr>
+            <tr><td class="alignRight">14</td><td>十兆</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">15</td><td>百兆</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">16</td><td>千兆</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">17</td><td>一京</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">18</td><td>十京</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">19</td><td>百京</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">20</td><td>千京</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">21</td><td>一垓</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">22</td><td>十垓</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">23</td><td>百垓</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">24</td><td>千垓</td><td class="alignCenter">(省略)</td></tr>
+            <tr><td class="alignRight">25</td><td>一𥝱</td><td class="alignCenter">(省略)</td></tr>
         </tbody>
     </table>
     <button id="numbersUnitClose">閉じる</button>     
 </dialog>
+<dialog id="dataUnitDialog">
+    <table class="row-deco">
+        <caption>データの単位</Frame></caption>
+        <thead>
+            <tr><th>単位</th><th>読み方</th><th>単位変換</th><th>情報量</th><th>備考</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Bit(b)</td><td>ビット</td><td>-</td><td>2<sup>1</sup> = 2</td><td>二</td></tr>
+            <tr><td>Byte(B)</td><td>バイト</td><td>1B = 8b</td><td>2<sup>8</sup> = 256</td><td>二百五十六</td></tr>
+            <tr><td>Kilo Byte(KB)</td><td>キロバイト</td><td>1KB</td><td>10<sup>3</sup> = 1,000</td><td>千</td></tr>
+            <tr><td>Mega Byte(MB)</td><td>メガバイト</td><td>1MB = 1,000KB</td><td>10<sup>6</sup> = 1,000,000</td><td>百万</td></tr>
+            <tr><td>Giga Byte(GB)</td><td>ギガバイト</td><td>1GB = 1,000MB</td><td>10<sup>9</sup> = (省略)</td><td>十億</td></tr>
+            <tr><td>Tera Byte(TB)</td><td>テラバイト</td><td>1TB = 1,000GB</td><td>10<sup>12</sup> = (省略)</td><td>一兆</td></tr>
+            <tr><td>Peta Byte(PB)</td><td>ペタバイト</td><td>1PB = 1,000TB</td><td>10<sup>15</sup> = (省略)</td><td>一千兆</td></tr>
+            <tr><td>Exa Byte(EB)</td><td>エクサバイト</td><td>1EB = 1,000PB</td><td>10<sup>18</sup> = (省略)</td><td>百京</td></tr>
+            <tr><td>Zetta Byte(ZB)</td><td>ゼタバイト</td><td>1ZB = 1,000EB</td><td>10<sup>21</sup> = (省略)</td><td>十垓</td></tr>
+            <tr><td>Yotta Byte(YB)</td><td>ヨタバイト</td><td>1YB = 1,000ZB</td><td>10<sup>24</sup> = (省略)</td><td>一𥝱</td></tr>
+        </tbody>
+    </table>
+    <table class="large_table row-deco">
+        <caption>データの単位</Frame></caption>
+        <thead>
+            <tr><th>単位</th><th>読み方</th><th>単位変換</th><th>情報量</th><th>備考</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Bit(b)</td><td>ビット</td><td>-</td><td>2<sup>1</sup> = 2</td><td>二</td></tr>
+            <tr><td>Byte(B)</td><td>バイト</th><td>1B = 8b</td><td>2<sup>8</sup> = 256</td><td>二百五十六</td></tr>
+            <tr><td>Kilobinary Byte(KiB)</td><td>キビバイト</td><td>1KiB = 1,024B</td><td>2<sup>10</sup> = 1,024</td><td>千二十四</td></tr>
+            <tr><td>Megabinary Byte(MiB)</td><td>メビバイト</td><td>1MiB = 1,024KiB</td><td>2<sup>20</sup> = 1,048,576</td><td>百四万八千五百七十六</td></tr>
+            <tr><td>Gigabinary Byte(GiB)</td><td>ギビバイト</td><td>1GiB = 1,024MiB</td><td>2<sup>30</sup> = 1,073,741,824</td><td>十億七千三百七十四万一千八百二十四</td></tr>
+            <tr><td>Terabinary Byte(TiB)</td><td>テビバイト</td><td>1TiB = 1,024GiB</td><td>2<sup>40</sup> = (省略)</td><td>一兆九百九十五億一千百六十二万七千七百七十六</td></tr>
+            <tr><td>Petabinary Byte(PiB)</td><td>ペビバイト</td><td>1PiB = 1,024TiB</td><td>2<sup>50</sup> = (省略)</td><td>一千百二十五兆八千九百九十九億六百八十四万二千六百二十四</td></tr>
+            <tr><td>Exabinary Byte(EiB)</td><td>エクスビバイト</td><td>1EiB = 1,024PiB</td><td>2<sup>60</sup> = (省略)</td><td>百十五京二千九百二十一兆五千四十六億六百八十四万六千九百七十六</td></tr>
+            <tr><td>Zettabinary Byte(ZiB)</td><td>ゼビバイト</td><td>1ZiB = 1,024EiB</td><td>2<sup>70</sup> = (省略)</td><td>十一垓八千五十九京一千六百二十兆七千百七十四億一千百三十万三千四百二十四</td></tr>
+            <tr><td>Yottabinary Byte(YiB)</td><td>ヨビバイト</td><td>1YiB = 1,024ZiB</td><td>2<sup>80</sup> = (省略)</td><td>一𥝱二千八十九垓二五百八十一京九千六百十四兆六千二百九十一億七千四百七十万六千百七十六</td></tr>
+        </tbody>
+    </table>    
+    <button id="dataUnitClose">閉じる</button> 
+</dialog>
 <script>
     setDialog('prefectures');
     setDialog('numbersUnit');
+    setDialog('dataUnit');
 </script>    
 </body>
 </html>
