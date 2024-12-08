@@ -5,7 +5,7 @@ function addHiddenSwitch(controlElement, targetElement){
         }
         else{
             targetElement.classList.add('hidden');
-        }               
+        }
     });
 }
 
