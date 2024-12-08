@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function(){
         let yearEnd = new Date(year, 11, 31);
         let days = Math.ceil((Date.parse(yearEnd) - today.getTime()) / (24 * 60 * 60 * 1000));
 
-        document.getElementById("today").innerHTML = "日本標準時(JST)<br>" + year + "/" + month + "/" + date + " " + hours + ":" + minutes + ":" + seconds + "<br>" + utcWeek + "曜日";
+        document.getElementById("today").innerHTML = "日本標準時(JST)<br>" + year + "/" + month + "/" + date + " " + hours + ":" + minutes + ":" + seconds + "<br>" + week + "曜日";
         document.getElementById("utcToday").innerHTML = "協定世界時(UTC)<br>" + utcYear + "/" + utcMonth + "/" + utcDate + " " + utcHours + ":" + utcMinutes + ":" + utcSeconds + "<br>" + utcWeek + "曜日";
 
         document.getElementById("era").innerHTML = "令和" + era + "年";
