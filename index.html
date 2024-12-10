@@ -47,20 +47,20 @@
                 <div id="leapYear" class="gridItem"><span class="loading">&nbsp;</span></div>
                 <div id="lastOfMonth" class="gridItem"><span class="loading">&nbsp;</span></div>
                 <div id="days" class="gridItem"><span class="loading">&nbsp;</span></div>
-                <div class="gridItem">6</div>
-                <div class="gridItem">7</div>
-                <div class="gridItem">8</div>
+                <div class="gridItem">-</div>
+                <div class="gridItem">-</div>
+                <div class="gridItem">-</div>
             </div>
         </section>
         <nav>
             <div class="grid">
                 <div id="numbersUnit" class="gridItem button">数字の単位</div>
                 <div id="dataUnit" class="gridItem button">データの単位</div>
-                <div id="tax" class="gridItem button">消費税</div>
+                <div id="symbol" class="gridItem button">半角記号</div>
             </div>
             <div class="grid">
                 <div id="prefectures" class="gridItem button">都道府県</div>
-                <div class="gridItem button">-</div>
+                <div id="tax" class="gridItem button">消費税</div>
                 <div class="gridItem button">-</div>
             </div>
             <div class="grid">
@@ -216,7 +216,51 @@
                 </tbody>
             </table>    
             <button id="taxClose">閉じる</button>
-        </dialog>        
+        </dialog>
+        <dialog id="symbolDialog">
+            <table class="row-deco">
+                <caption>半角記号</caption>
+                <thead>
+                    <tr><th>-</th><th>記号</th><th>読み(英語)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>!</td><td>Exclamation Mark</td></tr>
+                    <tr><td>2</td><td>&quot;</td><td>Quotation Mark</td></tr>
+                    <tr><td>3</td><td>#</td><td>Number Sign</td></tr>
+                    <tr><td>4</td><td>$</td><td>Dollar Sign</td></tr>
+                    <tr><td>5</td><td>%</td><td>Percent Sign</td></tr>
+                    <tr><td>6</td><td>&amp;</td><td>Ampersand</td></tr>
+                    <tr><td>7</td><td>&apos;</td><td>Apostrophe</td></tr>
+                    <tr><td>8</td><td>(</td><td>Left Parenthesis</td></tr>
+                    <tr><td>9</td><td>)</td><td>Right Parenthesis</td></tr>
+                    <tr><td>10</td><td>=</td><td>Equals Sign</td></tr>
+                    <tr><td>11</td><td>~</td><td>Tilde</td></tr>
+                    <tr><td>12</td><td>|</td><td>Vertical Line</td></tr>
+                    <tr><td>13</td><td>-</td><td>Hyphen-Minus</td></tr>
+                    <tr><td>14</td><td>^</td><td>Circumflex Accent</td></tr>
+                    <tr><td>15</td><td>￥(半角)</td><td>Yen Sign</td></tr>
+                    <tr><td>16</td><td>`</td><td>Grave Accent</td></tr>
+                    <tr><td>17</td><td>{</td><td>Left Curly Bracket</td></tr>
+                    <tr><td>18</td><td>@</td><td>Commercial At</td></tr>
+                    <tr><td>19</td><td>[</td><td>Left Square Bracket</td></tr>
+                    <tr><td>20</td><td>+</td><td>Plus Sign</td></tr>
+                    <tr><td>21</td><td>*</td><td>Asterisk</td></tr>
+                    <tr><td>22</td><td>}</td><td>Right Curly Bracket</td></tr>
+                    <tr><td>23</td><td>;</td><td>Semicolon</td></tr>
+                    <tr><td>24</td><td>:</td><td>Colon</td></tr>
+                    <tr><td>25</td><td>]</td><td>Right Square Bracket</td></tr>
+                    <tr><td>26</td><td>&lt;</td><td>Less-Than Sign</td></tr>
+                    <tr><td>27</td><td>&gt;</td><td>Greater-Than Sign</td></tr>
+                    <tr><td>28</td><td>?</td><td>Question Mark</td></tr>
+                    <tr><td>29</td><td>_</td><td>Low Line</td></tr>
+                    <tr><td>30</td><td>,</td><td>Comma</td></tr>
+                    <tr><td>31</td><td>.</td><td>Full Stop</td></tr>
+                    <tr><td>32</td><td>/</td><td>Solidus</td></tr>
+                    <tr><td>33</td><td>＼(半角)</td><td>Reverse Solidus</td></tr>
+                </tbody>
+            </table>    
+            <button id="symbolClose">閉じる</button>
+        </dialog>    
     </article>
 </main>
 <footer id="site_footer"></footer>
@@ -226,6 +270,7 @@
     setDialog('numbersUnit');
     setDialog('dataUnit');
     setDialog('tax');
+    setDialog('symbol');
 </script>
 </body>
 </html>
