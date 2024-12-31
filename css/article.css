@@ -13,3 +13,6 @@ main > article >article h3{
 	color: #333333;
 	margin-bottom: 12px;
 }
+main > article article{
+	padding-bottom: 1em;
+}
