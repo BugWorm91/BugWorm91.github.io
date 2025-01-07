@@ -16,3 +16,7 @@ main > article >article h3{
 main > article article{
 	padding-bottom: 1em;
 }
+
+main > article ul li{
+	margin: 16px 0;
+}
