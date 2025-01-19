@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <meta http-equiv="content-language" content="ja">
     <meta charset="UTF-8">
     <meta name="description" content="エンジニアの備忘録兼趣味のサイトです。">
     <meta name="keywords" content="プログラミング,C#,SQL,HTML/CSS/JavaScript,Dynamics365,小説">
@@ -33,16 +32,16 @@
 <main>
     <article>
         <h2 id="top">Home</h2>
-        <section class="displayBoard">
+        <div class="displayBoard">
             <p>
                 <span>お前はものごとがあまりに複雑に絡み合っていて手がつけられないと言う。でもそれはね、いちばん上からものごとを解決していこうとしているからじゃないかな。何か大事なことを決めようと思ったときはね、まず最初はどうでもいいようなところから始めた方がいい。誰が見てもわかる、誰が考えてもわかる本当に馬鹿みたいなところから始めるんだ。そしてその馬鹿みたいなところにたっぷりと時間をかけるんだ。　(中略)　他のみんなは誰が見てもわかるような馬鹿みたいなところは簡単にすっ飛ばして、少しでも早く先に行こうとする。でも俺はそうじゃない。馬鹿みたいなところにいちばん長く時間をかける。そういうところに長く時間をかければかけるほど、あとがうまく行くことがわかっているからさ」『ねじまき鳥クロニクル〈第2部〉予言する鳥編』 村上 春樹(ISBN4-10-100142-1)</span>
                 <span>「学校でも教わっているはずだよ、CNN、FDR、IMF、DMZ、CIA、それらを略語で呼ぶようになって、それに慣れてしまうと、本来の意味が失われることがある、必ず若いうちはフルネームで言いなさい、アメリカ軍の兵士はO・Jなどという略語を使う、O・Jが何かわかるか？」　(中略)　「敵が略語を使うからと言って、われわれも真似していると、意味を見失うことがある、国連軍の公用語は英語だ、われわれは彼らよりも英語の意味をしっかりと掴む必要があるのだ」『五分後の世界』 村上 龍(ISBN4-87728-444-3)</span>
             </p>
-        </section>
-        <section>
+        </div>
+        <div>
             <div id="instrumentDateTime" class="grid">
                 <div id="today" class="gridItem"><span class="loading">&nbsp;</span></div>
-                <div id="utcToday"class="gridItem"><span class="loading">&nbsp;</span></div>
+                <div id="utcToday" class="gridItem"><span class="loading">&nbsp;</span></div>
             </div>
             <div id="instrument" class="grid">
                 <div id="era" class="gridItem"><span class="loading">&nbsp;</span></div>
@@ -54,7 +53,7 @@
                 <div class="gridItem">-</div>
                 <div class="gridItem">-</div>
             </div>
-        </section>
+        </div>
         <nav>
             <div class="grid">
                 <div id="numbersUnit" class="gridItem button">数字の単位</div>
@@ -132,7 +131,7 @@
         </dialog>
         <dialog id="numbersUnitDialog">
             <table class="row-deco">
-                <caption>数字の単位</Frame></caption>
+                <caption>数字の単位</caption>
                 <thead>
                     <tr><th>桁数</th><th>単位</th><th>数字</th></tr>
                 </thead>
@@ -168,7 +167,7 @@
         </dialog>
         <dialog id="dataUnitDialog">
             <table class="row-deco">
-                <caption>データの単位</Frame></caption>
+                <caption>データの単位</caption>
                 <thead>
                     <tr><th>単位</th><th>読み方</th><th>単位変換</th><th>情報量</th><th>備考</th></tr>
                 </thead>
@@ -186,13 +185,13 @@
                 </tbody>
             </table>
             <table class="large_table row-deco">
-                <caption>データの単位</Frame></caption>
+                <caption>データの単位</caption>
                 <thead>
                     <tr><th>単位</th><th>読み方</th><th>単位変換</th><th>情報量</th><th>備考</th></tr>
                 </thead>
                 <tbody>
                     <tr><td>Bit(b)</td><td>ビット</td><td>-</td><td>2<sup>1</sup> = 2</td><td>二</td></tr>
-                    <tr><td>Byte(B)</td><td>バイト</th><td>1B = 8b</td><td>2<sup>8</sup> = 256</td><td>二百五十六</td></tr>
+                    <tr><td>Byte(B)</td><td>バイト</td><td>1B = 8b</td><td>2<sup>8</sup> = 256</td><td>二百五十六</td></tr>
                     <tr><td>Kilobinary Byte(KiB)</td><td>キビバイト</td><td>1KiB = 1,024B</td><td>2<sup>10</sup> = 1,024</td><td>千二十四</td></tr>
                     <tr><td>Megabinary Byte(MiB)</td><td>メビバイト</td><td>1MiB = 1,024KiB</td><td>2<sup>20</sup> = 1,048,576</td><td>百四万八千五百七十六</td></tr>
                     <tr><td>Gigabinary Byte(GiB)</td><td>ギビバイト</td><td>1GiB = 1,024MiB</td><td>2<sup>30</sup> = 1,073,741,824</td><td>十億七千三百七十四万一千八百二十四</td></tr>
