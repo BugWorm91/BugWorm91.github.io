@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.displayBoard{
+	overflow: hidden;
+	border: 1px #999999 solid;
+	border-radius: 5px;
+}
+.displayBoard p{
+	display: inline-block;
+	padding: 3px 3px 3px 100%;
+	white-space: nowrap;
+	animation: marquee 280s linear infinite;
+}
+@keyframes marquee {
+	0% { transform: translate(0); }
+	100% { transform: translate(-100%); }
+}
+
+main{
+	padding-top: 36px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	gap: 10px;
+	margin-bottom: 8px;
+}  
+.gridItem{
+	width: 100%;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	line-height: 150%;
+	padding: 8px 0;
+}
+#instrumentDateTime > .gridItem{
+	min-height: 5em;
+	border: 1px solid #999;
+	border-radius: 5px;
+}
+#instrument > .gridItem{
+	min-height: 3em;
+	border: 1px solid #999;
+	border-radius: 5px;
+}
+
+

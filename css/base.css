@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+body{
+	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+#wrapper{
+	margin: 0 auto;
+	padding-top: 8px;
+}
+@media screen and (min-width: 980px){
+    #wrapper{
+        width: 980px;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 979px){	
+    #wrapper{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 600px){
+    #wrapper{
+        width: 95%;
+    }
+}
+
+#site_header > div > a:link,
+#site_header > div > a:visited,
+#site_header > div > a:hover,
+#site_header > div > a:active,
+h1{
+	color: #ff9913;
+}
+
+#site_header > div > a:link,
+#site_header > div > a:visited,
+#site_header > div > a:hover,
+#site_header > div > a:active,
+h1{
+	text-shadow:1px 1px 0 #999999, 1px 2px 0 #999999;
+}
+
+#logo > a,
+h1,h2{
+    font-weight: bold;
+}
+
+h1, .displayBoard{
+    margin-bottom: 8px;
+}
+section+section{
+    margin-top: 32px;
+}
+#site_header, main, h2{
+    padding-bottom: 8px;
+}
+
+#site_header, h1, main{
+	border-bottom: solid 1px #ff9913;
+}
+
+#site_footer{
+	text-align: center;
+	font-size: 14px;
+	padding: 12px;
+	text-shadow:1px 1px 0 #a5a5a5, 1px 1px 0 #999999;
+}
+
+h1{
+    padding: 12px 8px;
+}
+
+main p{
+    line-height: 150%;
+    padding-left: 8px;
+}
+
+.loading{
+	display: inline-block;
+	vertical-align: middle;
+	color: #666;
+	line-height: 1;
+	width: 1em;
+	height: 1em;
+	border: 0.12em solid currentColor;
+	border-top-color: rgba(102, 102, 102, 0.3);
+	border-radius: 50%;
+	box-sizing: border-box;
+	animation: loading 1s linear infinite;
+}
+@keyframes loading{
+	0% {transform: rotate(0);}
+	100% {transform: rotate(360deg);}
+}
+
+.button{
+	color: #fff;
+	border-top: 3px solid #fdc03b;
+	border-right: 3px solid #a5a5a5;
+	border-bottom: 3px solid #a5a5a5;
+	border-left: 3px solid #fdc03b;
+	border-radius: 100px;
+	background: #fc9919e0;
+}
+.button:hover {
+	color: #0000ff;
+	border-top: 3px solid #a5a5a5;
+	border-right: 3px solid #fdc03b;
+	border-bottom: 3px solid #fdc03b;
+	border-left: 3px solid #a5a5a5;
+}
+
+table{
+	border-top: solid 1px #333333;
+	border-left: solid 1px #333333;
+	margin-bottom: 38px;
+}
+th, td{
+	border-right: solid 1px #333333;
+	border-bottom: solid 1px #333333;
+	padding: 3px 3px;
+}
+th{
+	background-color: #ffc579;
+	font-size: 14px;
+	padding: 6px;
+}
+.row-deco tr:nth-child(2n){
+	background-color: #fce8ce;
+}
+.alignRight{
+	text-align: right;
+}
+.alignCenter{
+	text-align: center;
+}
+
+dialog{
+	max-height: 80%;
+	max-width: 80%;
+}
+dialog > button{
+	width: 100%;
+	height: 3.5em;
+}
+
+section > section{
+	padding-left: 16px;
+}
