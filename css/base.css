@@ -147,3 +147,8 @@ dialog > button{
 section > section{
 	padding-left: 16px;
 }
+
+/* モーダル開時に背景のスクロールを防ぐ */
+html:has(dialog[open]){
+	overflow: hidden;
+}
