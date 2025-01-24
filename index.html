@@ -22,7 +22,7 @@
         <div><a href="#">Computer Bug and Bookworm</a></div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#top">Home</a></li>
                 <li><a href="#">Computer Bug</a></li>
                 <li><a href="#">Bookworm</a></li>
                 <li><a href="#">Random Notes</a></li>
@@ -30,7 +30,7 @@
         </nav>    
     </header>
         
-    <h1>Home</h1>
+    <h1 id="top">Home</h1>
     <div class="displayBoard">
         <p>
             <span>お前はものごとがあまりに複雑に絡み合っていて手がつけられないと言う。でもそれはね、いちばん上からものごとを解決していこうとしているからじゃないかな。何か大事なことを決めようと思ったときはね、まず最初はどうでもいいようなところから始めた方がいい。誰が見てもわかる、誰が考えてもわかる本当に馬鹿みたいなところから始めるんだ。そしてその馬鹿みたいなところにたっぷりと時間をかけるんだ。　(中略)　他のみんなは誰が見てもわかるような馬鹿みたいなところは簡単にすっ飛ばして、少しでも早く先に行こうとする。でも俺はそうじゃない。馬鹿みたいなところにいちばん長く時間をかける。そういうところに長く時間をかければかけるほど、あとがうまく行くことがわかっているからさ」【『ねじまき鳥クロニクル〈第2部〉予言する鳥編』 村上 春樹(ISBN4-10-100142-1)】</span>
@@ -39,8 +39,14 @@
     </div>
     <div>
         <div id="instrumentDateTime" class="grid">
-            <div id="today" class="gridItem"><span class="loading">&nbsp;</span></div>
-            <div id="utcToday" class="gridItem"><span class="loading">&nbsp;</span></div>
+            <div class="gridItem">
+                <div>日本標準時<br>Japan Standard Time(<abbr>JST</abbr>)</div>
+                <div id="today"><span class="loading"></span><br><br></div>
+            </div>
+            <div class="gridItem">
+                <div>協定世界時<br><abbr>UTC</abbr></div>
+                <div id="utcToday"><span class="loading"></span><br><br></div>
+            </div>
         </div>
         <div id="instrument" class="grid">
             <div id="era" class="gridItem"><span class="loading">&nbsp;</span></div>
@@ -89,7 +95,7 @@
         </section>
         <section>
             <h2>このサイトについて</h2>
-            <p>　<abbr title="Information Technology">IT</abbr>業界で大した技術も習得しないままうやむやに生きてきてしまったので、自戒の念を込めて作る技術&amp;趣味のサイトです。</p>
+            <p>　Information Technology(<abbr>IT</abbr>)業界で大した技術も習得しないままうやむやに生きてきてしまったので、自戒の念を込めて作る技術&amp;趣味のサイトです。</p>
         </section>
         <section>
             <h2>免責事項</h2>
