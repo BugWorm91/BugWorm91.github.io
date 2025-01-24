@@ -13,21 +13,23 @@
     <link type="text/css" rel="stylesheet" href="./css/home.css">
     <script src="./js/instrument.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/base.js"></script>
     <script src="./js/home.js"></script>
 </head>
 <body>
 <div id="wrapper">
     <header id="site_header">
-        <div id="logo"><a href="#">コンピューターバグと本の虫</a></div>
-        <div><a href="#">Computer Bug and Bookworm</a></div>
-        <nav>
+        <div id="logo"><a href="https://bugworm91.github.io/index.html">コンピューターバグと本の虫</a></div>
+        <div><a href="https://bugworm91.github.io/index.html">Computer Bug and Bookworm</a></div>
+        <noscript>JavaScriptで制御しています</noscript>
+        <nav id="site_nav">
             <ul>
-                <li><a href="#top">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Computer Bug</a></li>
                 <li><a href="#">Bookworm</a></li>
                 <li><a href="#">Random Notes</a></li>
             </ul>
-        </nav>    
+        </nav>
     </header>
         
     <h1 id="top">Home</h1>
@@ -81,15 +83,15 @@
         <section>
             <h2>コンテンツ</h2>
             <section>
-                <h3>Computer Bug(準備中)</h3>
-                <p>　技術関係の情報をまとめています。</p>
+                <h3><a href="./page/bug/index.html#top">Computer Bug</a></h3>
+                <p>　プログラムなどの技術関係の情報をまとめています。</p>
             </section>
             <section>
-                <h3>Bookworm(準備中)</h3>
+                <h3><a href="./page/bookworm/index.html#top">Bookworm</a></h3>
                 <p>　趣味の読書関係の情報をまとめています。</p>
             </section>
             <section>
-                <h3>Random Notes(準備中)</h3>
+                <h3><a href="./page/notes/index.html#top">Random Notes</a></h3>
                 <p>　雑記です。</p>
             </section>
         </section>
@@ -103,7 +105,7 @@
             <p>　引用部を除くコンテンツについての著作権は放棄しておりません。</p>
         </section>
     </main>
-    <footer id="site_footer">Copyright (C) 2025 BugWorm91</footer>
+    <footer id="site_footer"><noscript>JavaScriptで制御しています</noscript></footer>
 
     <dialog id="prefecturesDialog">
         <table>
@@ -298,12 +300,5 @@
         <button id="symbolClose">閉じる</button>
     </dialog>
 </div>
-<script>
-    setDialog('prefectures');
-    setDialog('numbersUnit');
-    setDialog('dataUnit');
-    setDialog('tax');
-    setDialog('symbol');
-</script>
 </body>
 </html>
