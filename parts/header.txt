@@ -3,8 +3,8 @@
         <nav id="site_nav">
             <ul>
                 <li><a href="https://bugworm91.github.io/index.html#top">Home</a></li>
-                <li><a href="https://bugworm91.github.io/bug/index.html#top">Computer Bug</a></li>
-                <li><a href="https://bugworm91.github.io/bookworm/index.html#top">Bookworm</a></li>
-                <li><a href="https://bugworm91.github.io/notes/index.html#top">Random Notes</a></li>
+                <li><a href="https://bugworm91.github.io/page/bug/index.html#top">Computer Bug</a></li>
+                <li><a href="https://bugworm91.github.io/page/bookworm/index.html#top">Bookworm</a></li>
+                <li><a href="https://bugworm91.github.io/page/notes/index.html#top">Random Notes</a></li>
             </ul>
         </nav>
