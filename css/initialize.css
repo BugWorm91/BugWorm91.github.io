@@ -110,7 +110,7 @@ input, button, select {
 	outline: none; /*タブキーを使ってリンクを辿る際、どこにフォーカスしているかわからなくなる。*/
 }
 
-/* HTML5 */
-article, aside, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+/* モーダル開時に背景のスクロールを防ぐ */
+html:has(dialog[open]){
+	overflow: hidden;
 }

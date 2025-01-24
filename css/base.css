@@ -24,6 +24,22 @@ body{
     }
 }
 
+#site_header > nav > ul{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	gap: 10px;
+	margin-top: 8px;
+}
+#site_header > nav > ul > li{
+	padding: 8px;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+#site_header nav a{
+	text-align: center;
+}
+
 #site_header > div > a:link,
 #site_header > div > a:visited,
 #site_header > div > a:hover,
@@ -49,7 +65,7 @@ h1, .displayBoard{
     margin-bottom: 8px;
 }
 section+section{
-    margin-top: 32px;
+    margin-top: 60px;
 }
 #site_header, main, h2{
     padding-bottom: 8px;
@@ -68,6 +84,10 @@ section+section{
 
 h1{
     padding: 12px 8px;
+}
+
+main{
+	padding-bottom: 80px;
 }
 
 main p{
@@ -148,7 +168,3 @@ section > section{
 	padding-left: 16px;
 }
 
-/* モーダル開時に背景のスクロールを防ぐ */
-html:has(dialog[open]){
-	overflow: hidden;
-}

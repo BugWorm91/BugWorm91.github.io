@@ -4,6 +4,7 @@
 	overflow: hidden;
 	border: 1px #999999 solid;
 	border-radius: 5px;
+	font-size: 18px;
 }
 .displayBoard p{
 	display: inline-block;
