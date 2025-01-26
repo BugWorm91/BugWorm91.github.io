@@ -8,6 +8,14 @@ body{
 	margin: 0 auto;
 	padding-top: 8px;
 }
+main ol,
+main ul{
+	padding: 3px 3px 3px 16px;
+}
+main ol li,
+main ul li{
+	padding: 3px;
+}
 @media screen and (min-width: 980px){
     #wrapper{
         width: 980px;
@@ -22,6 +30,10 @@ body{
     #wrapper{
         width: 95%;
     }
+	main ol li,
+	main ul li{
+		padding: 16px;
+	}
 }
 
 #site_header > nav > ul{
@@ -168,13 +180,3 @@ dialog > button{
 section section{
 	padding-left: 16px;
 }
-
-main ol,
-main ul{
-	padding: 3px 3px 3px 16px;
-}
-main ol li,
-main ul li{
-	padding: 3px;
-}
-
