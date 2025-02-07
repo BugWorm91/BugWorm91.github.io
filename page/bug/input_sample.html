@@ -15,20 +15,25 @@
         form{
             margin: 0 0 30px 18px;
         }
+        fieldset{
+            margin-bottom: 8px;
+        }
         fieldset + fieldset{
             margin-top: 30px;
         }
-        input{
+        input, select{
             margin: 3px 0;
-        }
-        h3{
-            margin-bottom: 16px;
+            padding: 8px;
         }
         input[type="reset"], input[type="submit"]{
             width: 100px;
         }
-        main > section > section{
-            margin-top: 30px;
+        input:invalid,textarea:invalid{
+            background-color: pink;
+        }
+        legend{
+            font-size: 90%;
+            margin-bottom: 8px;
         }
     </style>
 </head>
@@ -52,73 +57,141 @@
     <main>
         <section>
             <h2>input系サンプル</h2>
-            <p>　JavaScriptの制御なしのブラウザの挙動確認が目的。</p>
+            <p>　JavaScript制御なしのブラウザの挙動確認が目的。submitボタンはonsubmit="return false;"で無効化。</p>
             <section>
                 <h3>input type="text"</h3>
-                <form action="dummy" method="post">
+                <form action="dummy" method="post" onsubmit="return false;">
                     <fieldset>
+                        <legend>必須入力</legend>
                         <div>
-                            <input type="text" id="familiName" name="familiName" placeholder="性" required>
-                            <input type="text" id="firstName" name="firstName" placeholder="名" required>
-                        </div>
-                        <div>
-                            <input type="text" id="familiNameKana" name="familiNameKana" placeholder="セイ" pattern="[\u30A1-\u30FA\u30FC]+" title="全角カタカナで入力してください。" required>
-                            <input type="text" id="firstNameKana" name="firstNameKana" placeholder="メイ" pattern="[\u30A1-\u30FA\u30FC]+" title="全角カタカナで入力してください。" required>
-                        </div>
-                        <div>
-                            <input type="reset" value="リセット">
-                            <input type="submit" name="dummy" value="確定">        
+                            <input type="text" id="familiName" name="familiName" placeholder="placeholder" required>
                         </div>
                     </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>
+                </form>
+                <form action="dummy" method="post" onsubmit="return false;">
+                    <fieldset>
+                        <legend>必須入力・正規表現:全角カタカナ</legend>
+                        <div>
+                            <input type="text" id="familiNameKana" name="familiNameKana" placeholder="ゼンカクカナ" pattern="[\u30A1-\u30FA\u30FC]+" title="全角カタカナで入力してください。" required>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>
+                </form>
+                <form action="dummy" method="post" onsubmit="return false;">
+                    <fieldset>
+                        <legend>必須入力・正規表現:0～9と-・長さ:8文字</legend>
+                        <div>
+                            <input type="text" id="postalCode" name="postalCode" pattern="^[0-9\-]+$" placeholder="999-9999" minlength="8" maxlength="8" required>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>
+                </form>
+            </section>
+
+            <section>
+                <h3>input type="email"</h3>
+                <form action="dummy" method="post" onsubmit="return false;">
+                    <fieldset>
+                        <legend>必須入力</legend>
+                        <div>
+                            <input type="email" id="emailAddress" name="emailAddress" required>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>
+                </form>
+            </section>
+
+            <section>
+                <h3>input type="tel"</h3>
+                <form action="dummy" method="post" onsubmit="return false;">
+                    <fieldset>
+                        <legend>必須入力</legend>
+                        <div>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>
                 </form>
             </section>
     
             <section>
-                <h3>input type="date"</h3>
-                <form action="dummy" method="post">
+                <h3>input type="password"</h3>
+                <form action="dummy" method="post" onsubmit="return false;">
                     <fieldset>
-                        <input type="date" id="birthday" name="birthday" required>
+                        <legend>必須入力</legend>
                         <div>
-                            <input type="reset" value="リセット">
-                            <input type="submit" name="dummy" value="確定">        
-                        </div>    
+                            <input type="password" id="pass" name="password" required>
+                        </div>
                     </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>
+                </form>
+            </section>
+        
+            <section>
+                <h3>input type="date"</h3>
+                <form action="dummy" method="post" onsubmit="return false;">
+                    <fieldset>
+                        <legend>必須入力・初期値:2024/01/15・期間制限:2024/01/01～2024/01/31</legend>
+                        <input type="date" id="birthday" name="birthday" min="2024-01-01" max="2024-01-31" value="2024-01-15" required>
+                    </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>    
                 </form>
             </section>
     
             <section>
                 <h3>input type="number"</h3>
-                <form action="dummy" method="post">
+                <form action="dummy" method="post" onsubmit="return false;">
                     <fieldset>
-                        <input type="number" id="num" name="age" min="0" max="999" placeholder="0～999">
-                        <div>
-                            <input type="reset" value="リセット">
-                            <input type="submit" name="dummy" value="確定">        
-                        </div>
+                        <legend>必須入力・入力範囲-1～10</legend>
+                        <input type="number" id="num" name="age" min="-1" max="10" placeholder="-1～10" required>
                     </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>
                 </form>
             </section>
     
             <section>
                 <h3>input type="radio"</h3>
-                <form action="dummy" method="post">
+                <form action="dummy" method="post" onsubmit="return false;">
                     <fieldset>
-                        <legend>性別</legend>
+                        <legend>チェックなし・必須入力</legend>
                         <input type="radio" id="male" name="gender" value="M" required>
                         <label for="male">男</label>
                         <input type="radio" id="female" name="gender" value="F" required>
                         <label for="female">女</label>
                     </fieldset>
                     <div>
-                        <input type="reset" value="リセット">
-                        <input type="submit" name="dummy" value="確定">        
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
                     </div>
                 </form>
-                <form action="dummy" method="post">
+                <form action="dummy" method="post" onsubmit="return false;">
                     <fieldset>
-                        <legend>血液型</legend>
-                        <input type="radio" id="bloodTypeUnknown" name="bloodType" value="" checked>
-                        <label for="bloodTypeUnknown">不明</label>
+                        <legend>チェックあり・初期値:不明</legend>
                         <input type="radio" id="bloodTypeA" name="bloodType" value="A">
                         <label for="bloodTypeA">A</label>
                         <input type="radio" id="bloodTypeB" name="bloodType" value="B">
@@ -127,87 +200,20 @@
                         <label for="bloodTypeAB">AB</label>
                         <input type="radio" id="bloodTypeO" name="bloodType" value="O">
                         <label for="bloodTypeO">O</label>
+                        <input type="radio" id="bloodTypeUnknown" name="bloodType" value="" checked>
+                        <label for="bloodTypeUnknown">不明</label>
                     </fieldset>
                     <div>
-                        <input type="reset" value="リセット">
-                        <input type="submit" name="dummy" value="確定">        
-                    </div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>    
                 </form>
             </section>
-    
-            <section>
-                <h3>input type="text"</h3>
-                <form action="dummy" method="post">
-                    <fieldset>
-                        <div>
-                            <label for="postalCode">郵便番号</label>
-                            <input type="text" id="postalCode" name="postalCode" pattern="^[0-9\-]+$" placeholder="999-9999" minlength="8" maxlength="8" required>
-                        </div>
-                        <div>
-                            <label for="municipalities">市区町村</label>
-                            <input type="text" id="municipalities" name="municipalities" placeholder="XXX市XXX区XXX町XXX村" required>
-                        </div>
-                        <div>
-                            <label for="houseNumber1">番地</label>
-                            <input type="text" id="houseNumber1" name="houseNumber1" pattern="^[0-9\-]+$" placeholder="X-X-X" required>
-                        </div>
-                        <div>
-                            <label for="houseNumber2">建物・部屋番号等</label>
-                            <input type="text" id="houseNumber2" name="houseNumber2" placeholder="XXXマンションXXX号室">
-                        </div>
-                    </fieldset>
-                    <div>
-                        <input type="reset" value="リセット">
-                        <input type="submit" name="dummy" value="確定">        
-                    </div>
-                </form>
-            </section>
-    
-            <section>
-                <h3>input type="email" / input type="tel"</h3>
-                <form action="dummy" method="post">
-                    <fieldset>
-                        <div>
-                            <label for="emailAddress">メールアドレス</label>
-                            <input type="email" id="emailAddress" name="emailAddress" required>
-                        </div>
-                        <div>
-                            <label for="phone">電話番号</label>
-                            <input type="tel" id="phone" name="phone" pattern="^[0-9\-]+$" placeholder="999-9999-9999">
-                        </div>
-                    </fieldset>
-                    <div>
-                        <input type="reset" value="リセット">
-                        <input type="submit" name="dummy" value="確定">
-                    </div>
-                </form>
-            </section>
-    
-            <section>
-                <h3>input type="text" / input type="password"</h3>
-                <form action="dummy" method="post">
-                    <fieldset>
-                        <div>
-                            <label for="accountId">アカウントID</label>
-                            <input type="text" id="accountId" name="accountId" pattern="^[ -~]+$" minlength="8" maxlength="13" required>
-                        </div>
-                        <div>
-                            <label for="pass">パスワード</label>
-                            <input type="password" id="pass" name="password" minlength="8" maxlength="24" required>
-                        </div>
-                    </fieldset>
-                    <div>
-                        <input type="reset" value="リセット">
-                        <input type="submit" name="dummy" value="確定">        
-                    </div>
-                </form>
-            </section>
-    
+        
             <section>
                 <h3>select</h3>
-                <form action="dummy" method="post">
+                <form action="dummy" method="post" onsubmit="return false;">
                     <fieldset>
-                        <legend>出身地</legend>
                         <select id="birthplace">
                             <option value="">-</option>
                             <optgroup label="北海道・東北地方">
@@ -230,38 +236,58 @@
                             </optgroup>
                         </select>
                     </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>
                 </form>
             </section>
     
             <section>
                 <h3>input type="checkbox"</h3>
-                <form action="dummy" method="post">
+                <form action="dummy" method="post" onsubmit="return false;">
                     <fieldset>
+                        <legend>初期値:Bのみチェック</legend>
                         <input type="checkbox" id="attribute1" name="attribute1">
-                        <label for="attribute1">火</label>
-                        <input type="checkbox" id="attribute2" name="attribute2">
-                        <label for="attribute2">水</label>
+                        <label for="attribute1">A</label>
+                        <input type="checkbox" id="attribute2" name="attribute2" checked>
+                        <label for="attribute2">B</label>
                         <input type="checkbox" id="attribute3" name="attribute3">
-                        <label for="attribute3">風</label>
+                        <label for="attribute3">C</label>
                     </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>
                 </form>
             </section>
     
             <section>
                 <h3>input type="range"</h3>
-                <form action="dummy" method="post">
+                <form action="dummy" method="post" onsubmit="return false;">
                     <fieldset>
-                        <label for="power">パワー</label>
-                        <input type="range" id="power" name="power" min="0" max="100" step="1" value="50">
+                        <legend>初期値:30・範囲:0～90・step:30</legend>
+                        <input type="range" id="power" name="power" min="0" max="90" step="30" value="30">
                     </fieldset>
+                    <div>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
+                    </div>
                 </form>
             </section>
     
             <section>
                 <h3>textarea</h3>
-                <form action="dummy" method="post">
+                <form action="dummy" method="post" onsubmit="return false;">
+                    <fieldset>
+                        <legend>必須・10文字まで(改行も1文字)</legend>
+                        <div>
+                            <textarea id="note" name="note" rows="5" cols="10" maxlength="10" placeholder="フリー入力" required></textarea>
+                        </div>
+                    </fieldset>
                     <div>
-                        <textarea id="note" name="note" rows="5" cols="17" maxlength="10" placeholder="フリー入力"></textarea>
+                        <input type="reset" value="reset">
+                        <input type="submit" name="dummy" value="submit">
                     </div>
                 </form>
             </section>
