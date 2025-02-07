@@ -4,12 +4,18 @@ body{
 	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
+.hidden{
+	display: none;
+}
+
 #wrapper{
 	margin: 0 auto;
 	padding-top: 8px;
 }
 main ol,
-main ul{
+main ul,
+main dl,
+main dl dd{
 	padding: 3px 3px 3px 16px;
 }
 main ol li,
@@ -73,13 +79,17 @@ h1,h2{
     font-weight: bold;
 }
 h3{
-	margin-bottom: 16px;
+	margin-bottom: 8px;
 }
 
 h1, .displayBoard{
     margin-bottom: 8px;
 }
-section+section{
+
+main > section{
+	padding-top: 8px;
+}
+section + section{
     margin-top: 60px;
 }
 section section{
