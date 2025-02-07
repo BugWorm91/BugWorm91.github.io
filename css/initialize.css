@@ -74,7 +74,6 @@ abbr, acronym {
 
 a:link, a:visited, a:hover, a:active{
 	text-decoration: none;
-	outline: none; /* タブキーを使ってリンクを辿る際、どこにフォーカスしているかわからなくなる。 */
 }
 
 a:link {
@@ -104,10 +103,6 @@ sup {
 
 sub {
 	vertical-align: text-bottom;
-}
-
-input, button, select {
-	outline: none; /*タブキーを使ってリンクを辿る際、どこにフォーカスしているかわからなくなる。*/
 }
 
 /* モーダル開時に背景のスクロールを防ぐ */
