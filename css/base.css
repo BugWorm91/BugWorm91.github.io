@@ -178,6 +178,9 @@ th{
 	font-size: 14px;
 	padding: 6px;
 }
+.row-deco{
+	width: 100%;
+}
 .row-deco tr:nth-child(2n){
 	background-color: #fce8ce;
 }
