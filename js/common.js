@@ -12,14 +12,17 @@ function addHiddenSwitch(controlElement, targetElement){
 function setDialog(baseElementName){
     let dialog = document.getElementById(baseElementName + 'Dialog');
     let btn_show = document.getElementById(baseElementName);
-    let btn_close = document.getElementById(baseElementName + 'Close');
+    let btn_closeTop = document.getElementById(baseElementName + 'CloseTop');
+    let btn_closeBottom = document.getElementById(baseElementName + 'CloseBottom');
 
     btn_show.addEventListener('click', function() {
-      dialog.showModal();
-      dialog.scrollTop = 0;
+        dialog.showModal();
     }, false);
-    btn_close.addEventListener('click', function() {
-      dialog.close();
+    btn_closeTop.addEventListener('click', function() {
+        dialog.close();
+    }, false);
+    btn_closeBottom.addEventListener('click', function() {
+        dialog.close();
     }, false);
 }
 
