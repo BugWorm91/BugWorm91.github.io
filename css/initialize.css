@@ -5,6 +5,7 @@ form, fieldset, input, button, textarea, p, blockquote, th, td, legend {
 	margin: 0;
 	padding: 0;
 	word-wrap: break-word;
+	word-break: break-all;
 }
 
 body{
