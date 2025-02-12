@@ -12,6 +12,15 @@
     <link type="text/css" rel="stylesheet" href="../../css/base.css">
     <script src="../../js/base.js"></script>
     <script src="./index.js"></script>
+    <style>
+        @media screen and (min-width: 980px){
+            #read_Date{width: 90px;}
+            #author{width: 160px;}
+            #isbn{width: 160px;}
+            #star{width: 90px;}
+        }
+
+    </style>
 </head>
 <body>
 <div id="wrapper">
@@ -34,11 +43,11 @@
         <p>　読書記録 &amp; 心に刺さった文章をまとめています。ネタバレについては一切考慮していないので、閲覧の際はご注意ください。</p>
         <table id="read" class="large_table row-deco">
             <tr>
-                <th>読了日</th>
+                <th id="read_Date">読了日</th>
                 <th>タイトル</th>
-                <th>著者</th>
-                <th>識別番号(ISBN)</th>
-                <th>お薦め度</th>
+                <th id="author">著者</th>
+                <th id="isbn">識別番号(ISBN)</th>
+                <th id="star">お薦め度</th>
             </tr>
         </table>
     </main>
