@@ -11,7 +11,16 @@
     <link type="text/css" rel="stylesheet" href="../../css/initialize.css">
     <link type="text/css" rel="stylesheet" href="../../css/base.css">
     <script src="../../js/base.js"></script>
-    <script src="./index.js"></script>
+    <script src="./book.js"></script>
+    <style>
+        main footer{
+            text-align: right;
+            font-size: 80%;
+        }
+        h3{
+            margin-bottom: 12px;
+        }
+    </style>
 </head>
 <body>
 <div id="wrapper">
@@ -31,16 +40,9 @@
         
     <h1 id="top">Bookworm</h1>
     <main>
-        <p>　読書記録 &amp; 心に刺さった文章をまとめています。ネタバレについては一切考慮していないので、閲覧の際はご注意ください。</p>
-        <table id="read" class="large_table row-deco">
-            <tr>
-                <th style="width: 7em;">読了日</th>
-                <th>タイトル</th>
-                <th>著者</th>
-                <th style="width: 12em;">識別番号(ISBN)</th>
-                <th style="width: 6em;">お薦め度</th>
-            </tr>
-        </table>
+        <section id="book">
+            <h2 id="book_title"></h2>
+        </section>
     </main>
     <footer id="site_footer"><noscript>JavaScriptで制御しています</noscript></footer>
 </div>
