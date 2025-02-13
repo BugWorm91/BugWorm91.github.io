@@ -1,18 +1,16 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', async function(){
 
     let array = [];
-    
-    fetch("link.json").then(function(response) {
+
+    await fetch("link.json").then(function(response) {
         return response.json();
-    }).then(function(json) {
-    
+    }).then(function(json) {   
         for(let item in json)
         {
             array.push(json[item]["id"]);
-        }
-    
+        }   
     });
-      
+
     fetch("read.json").then(function(response) {
         return response.json();
     }).then(function(json) {
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }
     
             let link = document.createElement("a");
-            link.href = `./book.html?${json[item]["isbn"]}`;
+            link.href = `./book.html#top?${json[item]["isbn"]}`;
     
             let newRow = bookTable.insertRow();
     

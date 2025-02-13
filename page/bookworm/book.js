@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-    fetch("./json/"+ location.search.substring(1) + ".json").then(function(response) {
+    fetch("./json/"+ location.hash.substring().replace("#top?", "") + ".json").then(function(response) {
         return response.json();
     }).then(function(json) {
     
