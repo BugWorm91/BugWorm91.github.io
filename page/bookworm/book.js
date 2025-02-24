@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', function(){
-    fetch("./json/"+ location.hash.substring().replace("#top?", "") + ".json").then(function(response) {
+document.addEventListener('DOMContentLoaded', async function(){
+    let aaa = location.search.substring().replace("?", "");
+    await fetch("./json/"+ location.search.substring().replace("?", "") + ".json").then(function(response) {
         return response.json();
     }).then(function(json) {
     

@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async function(){
             }
     
             let link = document.createElement("a");
-            link.href = `./book.html#top?${json[item]["isbn"]}`;
+            link.href = `./book.html?${json[item]["isbn"]}` + `#top`;
     
             let newRow = bookTable.insertRow();
     
