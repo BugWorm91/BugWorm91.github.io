@@ -130,6 +130,9 @@ section + section {
 section section {
 	padding-left: 16px;
 }
+section > details {
+	padding-top: 18px;
+}
 
 main p {
     line-height: 150%;
