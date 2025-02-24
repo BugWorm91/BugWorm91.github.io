@@ -1,19 +1,21 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 980px){
+@media screen and (min-width: 980px) {
 	#read_Date{width: 90px;}
 	#author{width: 160px;}
 	#isbn{width: 160px;}
 	#star{width: 90px;}
 }
-
-main footer{
+main {
+	min-height: 80vh;
+}
+main footer {
 	text-align: right;
 	font-size: 80%;
 }
-h3{
+h3 {
 	margin-bottom: 12px;
 }
-main p{
+main p {
 	padding-right: 1.5em;
 }
